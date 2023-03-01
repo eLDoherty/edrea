@@ -2,4 +2,4 @@
 
     <?php echo get_the_title(); ?>
 
-<?php get_footer(); ?>
+<?php get_footer(); ?> 
