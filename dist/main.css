@@ -1,0 +1,160 @@
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./public/scss/main.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap);
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./public/scss/main.scss (1) ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap);
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./public/scss/main.scss (2) ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Sarabun", sans-serif;
+}
+
+.container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.edrea-archive-blog {
+  margin: 60px 0;
+}
+.edrea-archive-blog__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px 30px;
+  grid-template-areas: ". . ." ". . ." ". . .";
+}
+
+.edrea-header {
+  padding: 30px 0;
+  background-color: #005792;
+}
+.edrea-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edrea-header__wrapper .site-branding {
+  width: calc(27% - 20px);
+  display: flex;
+  align-items: center;
+}
+.edrea-header__wrapper .main-navigation {
+  width: calc(46% - 20px);
+  display: flex;
+  align-items: center;
+}
+.edrea-header__wrapper .main-navigation ul {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+.edrea-header__wrapper .main-navigation ul li {
+  margin: 0 15px;
+}
+.edrea-header__wrapper .main-navigation ul li a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.edrea-header__wrapper .main-navigation ul li a:hover {
+  color: #53CDE2;
+}
+.edrea-header__wrapper .site-search {
+  width: calc(27% - 20px);
+  text-align: right;
+}
+.edrea-header__wrapper .site-search input {
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.edrea-header__wrapper .site-search input:focus {
+  outline: none;
+}
+.edrea-header__wrapper .site-search input[type=submit] {
+  background-color: #53CDE2;
+  color: #FFF;
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.edrea-header__wrapper .site-search input[type=submit]:hover {
+  background-color: #79D1C3;
+}
+
+.edrea-footer {
+  background-color: #005792;
+  padding-top: 40px;
+  border-top: 15px solid #53CDE2;
+}
+.edrea-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.edrea-footer__wrapper ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+.edrea-footer__wrapper ul li {
+  list-style: none;
+  margin: 0 17px;
+}
+.edrea-footer__wrapper ul li a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.edrea-footer__wrapper ul li a:hover {
+  color: #53CDE2;
+}
+.edrea-footer__wrapper .edrea-credit {
+  padding-bottom: 40px;
+}
+.edrea-footer__wrapper .edrea-credit p {
+  color: #FFF;
+  margin: 0;
+  font-size: 14px;
+}
+.edrea-footer__wrapper .edrea-credit p a {
+  color: #53CDE2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.edrea-card {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
+  width: calc(33% - 30px);
+  margin-right: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.edrea-card__thumbnail img {
+  width: 100%;
+}
+.edrea-card__detail {
+  padding: 25px 20px;
+  position: relative;
+}
+.edrea-card__detail h1 {
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map*/

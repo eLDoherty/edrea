@@ -1,0 +1,44 @@
+.edrea-footer {
+    background-color: $primaryColor;
+    padding-top: 40px;
+    border-top: 15px solid $secondaryColor;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 30px;
+            li {
+                list-style: none;
+                margin: 0 17px;
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 17px;
+                    font-weight: 500;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $secondaryColor;
+                    }
+                }
+            }
+        }
+        .edrea-credit {
+            padding-bottom: 40px;
+            p {
+                color: $white;
+                margin: 0;
+                font-size: 14px;
+                a {
+                    color: $secondaryColor;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.edrea-card {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
+    width: calc(33% - 30px);
+    margin-right: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    &__thumbnail {
+
+        img {
+            width: 100%;
+        }
+    }
+    &__detail {
+        padding: 25px 20px;
+        position: relative;
+        h1 {
+            margin: 0;
+        }
+    }
+}
