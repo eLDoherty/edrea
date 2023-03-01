@@ -146,15 +146,45 @@ body {
   border-radius: 8px;
   margin-bottom: 30px;
 }
+.edrea-card__thumbnail {
+  position: relative;
+  padding: 10px;
+}
 .edrea-card__thumbnail img {
   width: 100%;
+  border-radius: 8px;
+}
+.edrea-card__thumbnail .article-date {
+  position: absolute;
+  left: 10px;
+  bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.301);
+  padding: 7px;
+  padding-left: 20px;
+}
+.edrea-card__thumbnail .article-date span {
+  color: #FFF;
 }
 .edrea-card__detail {
-  padding: 25px 20px;
+  padding: 0 20px;
+  padding-top: 0;
   position: relative;
 }
-.edrea-card__detail h1 {
+.edrea-card__detail a {
+  color: #06283D;
+  text-decoration: none;
+}
+.edrea-card__detail a h1 {
   margin: 0;
+  color: #005792;
+}
+.edrea-card__detail p {
+  line-height: 1.6;
+  color: rgb(48, 48, 48);
+}
+.edrea-card__detail p a {
+  color: #e77221;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map*/

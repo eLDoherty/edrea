@@ -5,8 +5,10 @@ A simple, fast and optimized Wordpress themes for blogging and news
 
 # Features
 
-- Sliders for trending blog or news
+- Sliders for trending-selected blog or news (Optional)
 - Meta SEO ready
+- Mobile friendly
+- Responsive
 - Simple and clean
 - Free to use
 

@@ -3,22 +3,20 @@
 <main id="primary" class="edrea-archive-blog">
     <div class="container">
         <div class="edrea-archive-blog__wrapper edrea-masonry">
-            <?php if ( have_posts() ) : ?>
-            <?php
-                /* Start the Loop */
-                while ( have_posts() ) :
+            <?php if ( have_posts() ) : 
+                    /* Start the Loop */
+                    while ( have_posts() ) :
+                        
+                        the_post();
+
+                        get_template_part( 'template-parts/content', get_post_type() );
+
+                    endwhile;
                     
-                    the_post();
-
-                    get_template_part( 'template-parts/content', get_post_type() );
-
-                endwhile;
-
-                the_posts_navigation();
-
                 endif;
             ?> 
         </div>
+        <?php the_posts_navigation(); ?>
     </div>
 </main>
 

@@ -64,7 +64,7 @@ function edrea_setup() {
 			'height'      => 250,
 			'width'       => 250,
 			'flex-width'  => true,
-			'flex-height' => true,
+			'flex-height' => true, 
 		)
 	);
 }
