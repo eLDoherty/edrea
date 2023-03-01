@@ -9,9 +9,11 @@ function edrea_enqueue_scripts() {
 
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/dist/main.css', array(), '0.1.0', 'all' );
+    wp_enqueue_style( 'swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css', array(), '0.1.0', 'all' );
 
     wp_enqueue_script( 'screen', get_template_directory_uri() . '/dist/main.js', array( 'jquery' ) );
     wp_enqueue_script( 'masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array( 'jquery' ) );
 
 }
 
@@ -91,7 +93,7 @@ function edrea_widgets_init() {
 /**
  * Get trending post by tags
  */
- function edrea_trending_posts() {
+function edrea_trending_posts() {
 
 	$args = array(
 		'post_type' => 'post',
@@ -100,7 +102,7 @@ function edrea_widgets_init() {
 	 
 	$query = new WP_Query( $args );
 
-	$post_id_slider = array();
+	$post_slider_id = array();
 
 	while( $query->have_posts() ) {
 
@@ -109,6 +111,7 @@ function edrea_widgets_init() {
 		if( has_tag( 'Trending' ) > 0 ) {
 
 			$post = get_post( get_the_ID() );
+
 			$post_detail = array(
 				'title' => $post->post_title,
 				'excerpt' => $post->post_excerpt,
@@ -117,12 +120,12 @@ function edrea_widgets_init() {
 				'thumbnail_url' => get_the_post_thumbnail_url( get_the_ID() )
 			);
 
-			array_push( $post_id_slider, $post_detail );
+			array_push( $post_slider_id, $post_detail );
 
 		}
 
 	}
 
-	return $post_id_slider;
+	return $post_slider_id;
 
 }
