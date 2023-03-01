@@ -1,4 +1,14 @@
-<?php get_header(); ?>
+<?php
+
+$args = array(
+    'prev_text'          => __( 'Older' ),
+    'next_text'          => __( 'Newest' ),
+    'screen_reader_text' => __( 'Posts navigation' ),
+    'aria_label'         => __( 'Posts' ),
+    'class'              => 'posts-navigation',
+);
+
+get_header(); ?>
 
 <main id="primary" class="edrea-archive-blog">
     <div class="container">
@@ -16,7 +26,7 @@
                 endif;
             ?> 
         </div>
-        <?php the_posts_navigation(); ?>
+        <?php the_posts_navigation( $args ); ?>
     </div>
 </main>
 

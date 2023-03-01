@@ -4,6 +4,10 @@
     margin-right: 30px;
     border-radius: 8px;
     margin-bottom: 30px;
+    transition: 0.3s;
+    &:hover {
+        transform: translateY(-5px);
+    }
     &__thumbnail { 
         position: relative;
         padding: 10px;
@@ -20,6 +24,26 @@
             padding-left: 20px;
             span {
                 color: $white;
+            }
+        }
+        .article-category {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            display: flex;
+            .cat {
+                text-decoration: none;
+                margin: 0 3px;
+                p {
+                    padding: 5px;
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 10px;
+                    margin: 0;
+                    border-radius: 3px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
             }
         }
     }

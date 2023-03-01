@@ -145,6 +145,10 @@ body {
   margin-right: 30px;
   border-radius: 8px;
   margin-bottom: 30px;
+  transition: 0.3s;
+}
+.edrea-card:hover {
+  transform: translateY(-5px);
 }
 .edrea-card__thumbnail {
   position: relative;
@@ -164,6 +168,26 @@ body {
 }
 .edrea-card__thumbnail .article-date span {
   color: #FFF;
+}
+.edrea-card__thumbnail .article-category {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  display: flex;
+}
+.edrea-card__thumbnail .article-category .cat {
+  text-decoration: none;
+  margin: 0 3px;
+}
+.edrea-card__thumbnail .article-category .cat p {
+  padding: 5px;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 10px;
+  margin: 0;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .edrea-card__detail {
   padding: 0 20px;
@@ -185,6 +209,28 @@ body {
 .edrea-card__detail p a {
   color: #e77221;
   font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.nav-links .nav-previous, .nav-links .nav-next {
+  margin: 0 15px;
+  background-color: #005792;
+  padding: 10px 25px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.nav-links .nav-previous:hover, .nav-links .nav-next:hover {
+  background-color: #e77221;
+}
+.nav-links .nav-previous a, .nav-links .nav-next a {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=main.css.map*/
