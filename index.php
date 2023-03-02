@@ -1,5 +1,7 @@
 <?php 
 
+global $wp_query;
+
 $args = array(
     'prev_text'          => __( 'Older' ),
     'next_text'          => __( 'Newest' ),
@@ -8,7 +10,15 @@ $args = array(
     'class'              => 'posts-navigation',
 );
 
+$posts = array(
+    'post_type' => 'post',
+);
+
+$query = new WP_Query( $posts );
+
 $trends = edrea_trending_posts();
+
+$total_posts = (int) $wp_query->post_count;
 
 get_header(); ?> 
 
@@ -26,7 +36,7 @@ get_header(); ?>
                             <div class="trending-detail">
                                 <h2 class="trending-title"><?php echo $trend['title']; ?></h2>
                                 <p class="trending-excerpt"><?php echo $trend['excerpt']; ?></p>
-                                <a class="trending-button" href="<?php echo $trend['permalink']; ?>">Read Now</a>
+                                <a class="trending-button" href="<?php echo $trend['permalink']; ?>"><?php echo __( 'Read Now' ); ?></a>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -37,12 +47,12 @@ get_header(); ?>
             </div>
         <?php endif; ?>
         
-        <div class="edrea-archive-blog__wrapper edrea-masonry">
-            <?php if ( have_posts() ) : 
+        <div id="edrea-ajax-wrapper" class="edrea-archive-blog__wrapper edrea-masonry">
+            <?php if ( $query->have_posts() ) : 
                     /* Start the Loop */
-                    while ( have_posts() ) :
+                    while ( $query->have_posts() ) :
                         
-                        the_post();
+                        $query->the_post();
 
                         get_template_part( 'template-parts/content', get_post_type() );
 
@@ -51,7 +61,10 @@ get_header(); ?>
                 endif;
             ?> 
         </div>
-        <?php the_posts_navigation( $args ); ?>
+        <div class="edrea-load-more">
+            <input type="hidden" id="current_total_post" value="<?php echo $total_posts; ?>">
+            <button id="button-load-more" value="<?php echo admin_url('admin-ajax.php'); ?>"><?php echo __( 'Load more' ); ?></button>
+        </div>
     </div>
 </main>
 

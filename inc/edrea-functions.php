@@ -39,3 +39,37 @@ function edrea_trending_posts() {
 	return $post_slider_id;
 
 }
+
+/**
+ * Load more ajaxify
+ */
+add_action( 'wp_ajax_nopriv_edrea_load_more', 'edrea_load_more' );
+add_action( 'wp_ajax_edrea_load_more', 'edrea_load_more' );
+
+function edrea_load_more() {
+
+	$post_per_page = isset( $_POST['count'] ) ?  $_POST['count'] : 9;
+
+	$args = array(
+		'post_type' => 'post',
+		'posts_per_page' => $post_per_page
+	);
+
+	$query = new WP_Query( $args );
+
+	$html = (string) '';
+
+	while( $query->have_posts() ) {
+
+		$query->the_post();
+
+		$html .= get_template_part( 'template-parts/content', get_post_type() );
+
+	}
+
+	echo $html;
+
+	wp_die();
+
+}
+
