@@ -29,9 +29,3 @@ You can request features as you want. But im not promise I will adding it :D. An
 
 The themes under construction
 
-
-
-
-
-
-

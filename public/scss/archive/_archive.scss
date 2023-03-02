@@ -86,5 +86,21 @@
           align-content: space-evenly;
           align-items: center;
     }
+
+    .edrea-load-more {
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: $primaryColor;
+            color: $white;
+            width: 160px;
+            padding: 10px;
+            font-size: 17px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
 }
 

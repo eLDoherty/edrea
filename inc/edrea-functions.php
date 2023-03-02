@@ -48,7 +48,7 @@ add_action( 'wp_ajax_edrea_load_more', 'edrea_load_more' );
 
 function edrea_load_more() {
 
-	$page_order = isset( $_POST['count'] ) ? $_POST['count'] : 9;
+	$page_order = isset( $_POST['count'] ) ? $_POST['count'] : 2;
 
 	$args = array(
 		'post_type' => 'post',
@@ -65,9 +65,10 @@ function edrea_load_more() {
 
 	}
 
-	echo $html;
+	echo $html; 
 
 	wp_die();
 
 }
+
 

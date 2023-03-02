@@ -48,9 +48,6 @@ jQuery(document).ready(function ($) {
         } else {
           $('#button-load-more').text($('#button-text').val());
         }
-      },
-      error: function (error) {
-        console.log(error);
       }
     });
   });

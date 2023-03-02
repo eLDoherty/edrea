@@ -15,7 +15,7 @@ jQuery(document).ready( function($) {
         total_posts += 1;
 
         $.ajax({
-            type: "POST",
+            type: "POST", 
             url: ajax_url,
             dataType: 'html',
             data: {
@@ -33,9 +33,6 @@ jQuery(document).ready( function($) {
 
             },
 
-            error: function( error ) {
-                console.log( error );
-            }
         });
     })
 

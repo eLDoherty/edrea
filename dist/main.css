@@ -100,6 +100,20 @@ body {
   align-content: space-evenly;
   align-items: center;
 }
+.edrea-archive-blog .edrea-load-more {
+  display: flex;
+  justify-content: center;
+}
+.edrea-archive-blog .edrea-load-more button {
+  background-color: #005792;
+  color: #FFF;
+  width: 160px;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 .edrea-header {
   padding: 30px 0;
