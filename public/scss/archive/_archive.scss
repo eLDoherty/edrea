@@ -1,5 +1,77 @@
 .edrea-archive-blog {
     margin: 60px 0;
+
+    .swiper {
+        margin-bottom: 60px;
+
+        .swiper-button-next, .swiper-button-prev {
+            top: unset; 
+            border: 1px solid $primaryColor;
+            padding: 5px 15px;
+            color: $orange;
+            border-radius: 3px;
+            bottom: 0;
+            width: 25px;
+            height: 25px;
+            transition: 0.3s;
+            &::after {
+                font-size: 14px;
+            }
+            &:hover {
+                background-color: $primaryColor;
+                color: $white;
+            }
+        }
+
+        .swiper-button-prev {
+            left: unset;
+            right: 100px;
+        }
+        .swiper-button-next {
+            right: 40px;
+        }
+    }
+
+    &__slider {
+       
+        &--item {
+            display: flex !important;
+            align-items: flex-start;
+            justify-content: space-between;
+            .trending-thumbnail {
+                width: calc( 50% - 30px );
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .trending-detail {
+                width: calc( 50% - 30px );
+
+                .trending-title {
+                    font-size: 40px;
+                    color: $blackText;
+                }
+                .trending-excerpt {
+                    font-size: 25px;
+                    margin-bottom: 60px;
+                    line-height: 1.4;
+                }
+                .trending-button {
+                    padding: 10px 20px;
+                    color: $white;
+                    background-color: $primaryColor;
+                    text-decoration: none;
+                    font-size: 20px;
+                    border-radius: 5px;
+                    transition: 0.3s;
+                    &:hover {
+                        background-color: $secondaryColor;
+                    }
+                }
+            }
+        }
+    }
     &__wrapper {
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr; 
@@ -9,5 +81,10 @@
           ". . ."
           ". . ."
           ". . ."; 
+          justify-content: space-evenly;
+          justify-items: center;
+          align-content: space-evenly;
+          align-items: center;
     }
 }
+

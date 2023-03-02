@@ -7,7 +7,8 @@ const wpConfig  = require('@wordpress/scripts/config/webpack.config.js');
  */
 const config = merge( wpConfig, {
     entry: {
-        main: ['./public/js/main.js', './public/scss/main.scss'],
+        main: ['./public/js/main.js', './public/scss/main.scss' ],
+        vanila: './public/js/vanila.js'
     },
     output: {
         path: path.resolve(__dirname, './dist/')

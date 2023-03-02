@@ -8,7 +8,15 @@
         .site-branding {
             width: calc(27% - 20px);
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            .site-description {
+                margin: 0;
+                color: $white;
+                font-style: italic;
+                margin-left: 20px;
+                font-weight: 600;
+            }
         }
         .main-navigation {
             width: calc(46% - 20px);

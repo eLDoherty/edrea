@@ -6,14 +6,15 @@
                         <?php
                             wp_nav_menu(
                                 array(
-                                    'theme_location' => 'menu-1',
-                                    'menu_id'        => 'primary-menu',
+                                    'theme_location' => 'menu-2',
+                                    'menu_id'        => 'footer-menu',
                                 )
                             );
                         ?>
                     </nav>
                     <div class="edrea-credit">
                         <p>©2023 <a href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a> . All Rights Reserved.</p>
+                        <p class="author">Themes by <a style="color: white" href="https://github.com/eLDoherty/edrea">Leonardo Doherty</a></p>
                     </div>
                 </div>
             </div>

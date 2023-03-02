@@ -2,10 +2,11 @@
     background-color: $primaryColor;
     padding-top: 40px;
     border-top: 15px solid $secondaryColor;
+    margin-top: 60px;
     &__wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; 
         ul {
             padding: 0;
             margin: 0;
@@ -37,6 +38,14 @@
                     color: $secondaryColor;
                     text-decoration: none;
                     font-weight: 600;
+                }
+            }
+            .author {
+                font-size: 12px;
+                text-align: center;
+                margin-top: 10px;
+                a {
+                    font-weight: 400;
                 }
             }
         }

@@ -14,8 +14,19 @@
 		<div class="container">
 			<div class="edrea-header__wrapper">
 				<div class="site-branding">
-					<?php the_custom_logo(); ?>
-					<p class="site-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+					<?php  if( get_custom_logo() ) {
+						the_custom_logo();
+						} elseif ( is_front_page() && is_home() ) { ?>
+							<h1 class="site-title">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							</h1>
+							<?php $description = get_bloginfo( 'description', 'display' );
+						} else { ?>
+							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+							<?php
+							$description = get_bloginfo( 'description', 'display' );
+						} 
+					?>
 				</div>
 
 				<nav id="site-navigation" class="main-navigation">

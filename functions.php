@@ -12,6 +12,7 @@ function edrea_enqueue_scripts() {
     wp_enqueue_style( 'swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css', array(), '0.1.0', 'all' );
 
     wp_enqueue_script( 'screen', get_template_directory_uri() . '/dist/main.js', array( 'jquery' ) );
+    wp_enqueue_script( 'vanila', get_template_directory_uri() . '/dist/vanila.js', array( 'jquery' ) );
     wp_enqueue_script( 'masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array( 'jquery' ) );
     wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array( 'jquery' ) );
 
@@ -37,6 +38,7 @@ function edrea_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'edrea' ),
+			'menu-2' => esc_html__( 'Footer', 'edrea' ),
 		)
 	);
 
@@ -91,41 +93,6 @@ function edrea_widgets_init() {
 }
 
 /**
- * Get trending post by tags
+ * Edrea functionality
  */
-function edrea_trending_posts() {
-
-	$args = array(
-		'post_type' => 'post',
-		'posts_per_page' => -1, 
-	);
-	 
-	$query = new WP_Query( $args );
-
-	$post_slider_id = array();
-
-	while( $query->have_posts() ) {
-
-		$query->the_post();
-
-		if( has_tag( 'Trending' ) > 0 ) {
-
-			$post = get_post( get_the_ID() );
-
-			$post_detail = array(
-				'title' => $post->post_title,
-				'excerpt' => $post->post_excerpt,
-				'permalink' => get_the_permalink( get_the_ID() ),
-				'date' => $post->post_date,
-				'thumbnail_url' => get_the_post_thumbnail_url( get_the_ID() )
-			);
-
-			array_push( $post_slider_id, $post_detail );
-
-		}
-
-	}
-
-	return $post_slider_id;
-
-}
+require get_template_directory() . '/inc/edrea-functions.php';
