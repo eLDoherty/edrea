@@ -7,14 +7,12 @@ jQuery(document).ready( function($) {
 
     // Ajax Load More
     var ajax_url = $('#button-load-more').val();
-    var total_posts = parseInt($('#current_total_post').val());
+    var total_posts = 1;
     $('#button-load-more').click( function( e ) {
 
         e.preventDefault();
 
-        total_posts += 3;
-
-        var wrapper = $('#edrea-ajax-wrapper');
+        total_posts += 1;
 
         $.ajax({
             type: "POST",
@@ -25,9 +23,16 @@ jQuery(document).ready( function($) {
                 count: total_posts
             },
             success: function( res ){
-                wrapper.html( res );
-                $('.edrea-masonry').masonry('reloadItems');
+
+                if( res ) {
+                    var $content = $( res );
+                    $('.edrea-masonry').append( $content ).masonry( 'appended', $content );
+                } else {
+                    $('#button-load-more').text( $('#button-text' ).val() );
+                }
+
             },
+
             error: function( error ) {
                 console.log( error );
             }

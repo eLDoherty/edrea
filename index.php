@@ -62,10 +62,11 @@ get_header(); ?>
             ?> 
         </div>
         <div class="edrea-load-more">
-            <input type="hidden" id="current_total_post" value="<?php echo $total_posts; ?>">
+            <input type="hidden" id="button-text" value="<?php echo __("All Caught");?>">
             <button id="button-load-more" value="<?php echo admin_url('admin-ajax.php'); ?>"><?php echo __( 'Load more' ); ?></button>
         </div>
     </div>
 </main>
 
 <?php get_footer(); ?>
+
