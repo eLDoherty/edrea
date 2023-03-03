@@ -1,0 +1,30 @@
+.edrea-recent-post {
+
+    &__heading {
+        color: $orange;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-weight: 700 !important;
+        margin-top: 15px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &--post {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 25%;
+            margin-right: 4%;
+            height: 60px;
+            object-fit: cover;
+        }
+        h3 {
+            width: 70%;
+            font-size: 16px;
+            color: $primaryColor;
+        }
+    }
+} 

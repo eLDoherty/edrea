@@ -1,6 +1,6 @@
 <?php
 
-$excerpt = substr( get_the_excerpt(), 0 , 100 );
+$excerpt = substr( get_the_excerpt(), 0 , 120 );
 $categories = get_the_category( get_the_ID() );
 
 ?>

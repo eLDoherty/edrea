@@ -1,10 +1,11 @@
 .edrea-widget-area {
 
-    h2, h3, h4 {
-        color: $primaryColor;
+    h1, h2, h3, h4 {
+        color: $orange;
         font-weight: 600;
         text-transform: uppercase;
         font-weight: 700;
+        margin-top: 15px;
     }
     a {
         color: $black;

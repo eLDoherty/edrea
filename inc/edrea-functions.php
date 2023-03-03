@@ -90,3 +90,37 @@ function edrea_breadcrumbs_single_post() {
 	<?php
 }
 
+/**
+ * Edrea show 5 recent post
+ * Curre
+ */
+function edrea_recent_post_data() {
+
+	$args = array(
+		'post_type' => 'post',
+		'posts_per_page' => 5
+	);
+	
+	$query = new WP_Query( $args ); 
+
+	$recent_posts = (array) array();
+
+	if( $query->have_posts() ) {	
+
+		while( $query->have_posts() ) {
+			$query->the_post();
+			$query_recent_post = array(
+				"thumbnail" => get_the_post_thumbnail_url(),
+				"title" => get_the_title(),
+				"permalink" => get_the_permalink()
+			);
+
+			array_push( $recent_posts, $query_recent_post );
+		}
+		wp_reset_postdata();	
+	}
+
+	return $recent_posts;
+	
+}
+

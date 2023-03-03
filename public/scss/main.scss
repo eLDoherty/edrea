@@ -1,4 +1,3 @@
-
 // Colors
 @import './colors/colors';
 
@@ -21,6 +20,12 @@
 @import './components/edrea-card';
 @import './components/breadcrumbs';
 @import './components/sidebar';
+@import './components/recent-posts';
+@import './components/social-sharer';
+@import './components/comments';
 
 // Default wordpress class overriding
 @import './default/default';
+
+// Customizer
+@import './customizer/customizer';
