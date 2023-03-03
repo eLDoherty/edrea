@@ -71,4 +71,22 @@ function edrea_load_more() {
 
 }
 
+/**
+ * Edrea Custom Breadcrumbs
+ * Only show in single-post, in other page will doesn't work correctly 
+ * 
+ * @return breadcrumbs
+ */
+function edrea_breadcrumbs_single_post() {
+
+	$category = get_the_category( get_the_ID() )[0];
+	$cat_link = get_category_link( $category->cat_ID );
+	?>
+		<ul class="edrea-breadcrumbs">
+			<li><a href="<?php echo get_home_url(); ?>"><?php echo __( 'Blogs' ); ?></a><span>></span></li>
+			<li><a href="<?php echo $cat_link; ?>"><?php echo $category->name; ?></a><span>></span></li>
+			<li><?php echo get_the_title(); ?></li>
+		</ul>
+	<?php
+}
 

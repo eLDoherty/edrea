@@ -33,6 +33,7 @@ jQuery(document).ready(function ($) {
   $('#button-load-more').click(function (e) {
     e.preventDefault();
     total_posts += 1;
+    $(this).text('Loading...');
     $.ajax({
       type: "POST",
       url: ajax_url,
@@ -44,7 +45,11 @@ jQuery(document).ready(function ($) {
       success: function (res) {
         if (res) {
           var $content = $(res);
+          $('#button-load-more').text('Load more');
           $('.edrea-masonry').append($content).masonry('appended', $content);
+          $('html, body').animate({
+            scrollTop: $("#button-load-more").offset().top
+          }, 200);
         } else {
           $('#button-load-more').text($('#button-text').val());
         }

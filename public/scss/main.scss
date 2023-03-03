@@ -11,10 +11,14 @@
 // Archive
 @import './archive/archive';
 
+// Single
+@import './single/single';
+
 // Components
 @import './components/header';
 @import './components/footer';
 @import './components/edrea-card';
+@import './components/breadcrumbs';
 
 // Default wordpress class overriding
 @import './default/default';

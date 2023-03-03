@@ -9,6 +9,10 @@
 /*!**************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./public/scss/main.scss (2) ***!
   \**************************************************************************************************************************************************************************************************************************************************/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -113,6 +117,10 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.edrea-single-post {
+  padding: 30px 0;
 }
 
 .edrea-header {
@@ -309,6 +317,26 @@ body {
 .edrea-card__detail p a {
   color: #e77221;
   font-weight: 600;
+}
+
+.edrea-breadcrumbs {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+.edrea-breadcrumbs li {
+  list-style: none;
+  font-size: 12px;
+}
+.edrea-breadcrumbs li a {
+  color: #e77221;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+.edrea-breadcrumbs li span {
+  margin: 0 10px;
 }
 
 .nav-links {
