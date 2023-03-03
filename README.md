@@ -30,3 +30,9 @@ You can request features as you want. But im not promise I will adding it :D. An
 
 The themes under construction
 
+- Build single page and styling
+- Create and custom style sidebar
+- Create custom breadcrumbs
+- Create comment section - styling
+- Build social media sharer template
+- Styling all current needed section

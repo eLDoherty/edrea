@@ -1,3 +1,84 @@
 .edrea-comments-area {
     border-top: 1px solid $blackText;
+} 
+
+.edrea-comments-area {
+
+    p.comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        textarea, input {
+            padding: 8px;
+            font-size: 17px;
+            color: $blackText;
+            font-family: $sarabun;
+            border: none;
+            border: 1px solid #b1b1b17a;
+            &:focus {
+                outline: none;
+            }
+        }
+        
+    }
+
+    #submit {
+        background-color: $primaryColor;
+        color: $white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background-color: $orange;
+        }
+    }
+
+    span.says {
+        display: none;
+    }
+
+    .comments-title {
+        color: $blackText;
+    }
+
+    .comment-list {
+        list-style: none;
+        ol.children {
+            list-style: none;
+        }
+        span.edit-link {
+            margin-left: 10px;
+            a {
+                color: $orange;
+            }
+        }
+    }
+
+    .comment-body {
+        margin: 20px 0;
+        border-bottom: 1px solid #b1b1b17a;
+        padding-bottom: 20px;
+        time {
+            font-size: 14px;
+        }
+    }
+    .comment-author {
+        display: flex;
+        align-items: center;
+    }
+    .comment-meta img {
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+    footer.comment-meta {
+        background-color: #53cde221;
+        padding: 17px;
+        border-radius: 5px;
+    }
 }

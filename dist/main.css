@@ -566,6 +566,78 @@ blockquote:after {
   border-top: 1px solid rgb(80, 80, 80);
 }
 
+.edrea-comments-area p.comment-form-comment, .edrea-comments-area .comment-form-author, .edrea-comments-area .comment-form-email, .edrea-comments-area .comment-form-url {
+  display: flex;
+  flex-direction: column;
+}
+.edrea-comments-area p.comment-form-comment label, .edrea-comments-area .comment-form-author label, .edrea-comments-area .comment-form-email label, .edrea-comments-area .comment-form-url label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.edrea-comments-area p.comment-form-comment textarea, .edrea-comments-area p.comment-form-comment input, .edrea-comments-area .comment-form-author textarea, .edrea-comments-area .comment-form-author input, .edrea-comments-area .comment-form-email textarea, .edrea-comments-area .comment-form-email input, .edrea-comments-area .comment-form-url textarea, .edrea-comments-area .comment-form-url input {
+  padding: 8px;
+  font-size: 17px;
+  color: rgb(80, 80, 80);
+  font-family: "Sarabun", sans-serif;
+  border: none;
+  border: 1px solid rgba(177, 177, 177, 0.4784313725);
+}
+.edrea-comments-area p.comment-form-comment textarea:focus, .edrea-comments-area p.comment-form-comment input:focus, .edrea-comments-area .comment-form-author textarea:focus, .edrea-comments-area .comment-form-author input:focus, .edrea-comments-area .comment-form-email textarea:focus, .edrea-comments-area .comment-form-email input:focus, .edrea-comments-area .comment-form-url textarea:focus, .edrea-comments-area .comment-form-url input:focus {
+  outline: none;
+}
+.edrea-comments-area #submit {
+  background-color: #005792;
+  color: #FFF;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.edrea-comments-area #submit:hover {
+  background-color: #e77221;
+}
+.edrea-comments-area span.says {
+  display: none;
+}
+.edrea-comments-area .comments-title {
+  color: rgb(80, 80, 80);
+}
+.edrea-comments-area .comment-list {
+  list-style: none;
+}
+.edrea-comments-area .comment-list ol.children {
+  list-style: none;
+}
+.edrea-comments-area .comment-list span.edit-link {
+  margin-left: 10px;
+}
+.edrea-comments-area .comment-list span.edit-link a {
+  color: #e77221;
+}
+.edrea-comments-area .comment-body {
+  margin: 20px 0;
+  border-bottom: 1px solid rgba(177, 177, 177, 0.4784313725);
+  padding-bottom: 20px;
+}
+.edrea-comments-area .comment-body time {
+  font-size: 14px;
+}
+.edrea-comments-area .comment-author {
+  display: flex;
+  align-items: center;
+}
+.edrea-comments-area .comment-meta img {
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.edrea-comments-area footer.comment-meta {
+  background-color: rgba(83, 205, 226, 0.1294117647);
+  padding: 17px;
+  border-radius: 5px;
+}
+
 .nav-links {
   display: flex;
   justify-content: center;
