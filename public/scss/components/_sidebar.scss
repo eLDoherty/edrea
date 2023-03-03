@@ -1,0 +1,19 @@
+.edrea-widget-area {
+
+    h2, h3, h4 {
+        color: $primaryColor;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    a {
+        color: $black;
+        transition: 0.3s;
+        &:hover {
+            color: $orange;
+        }
+    }
+    li {
+        margin-bottom: 10px;
+    }
+}

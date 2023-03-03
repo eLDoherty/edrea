@@ -81,8 +81,8 @@ add_action( 'widgets_init', 'edrea_widgets_init' );
 function edrea_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'edrea' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'My Sidebar', 'edrea' ),
+			'id'            => 'edrea-sidebar',
 			'description'   => esc_html__( 'Add widgets here.', 'edrea' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

@@ -7,8 +7,43 @@ body {
     font-family: $sarabun;
 }
 
+h1, h2, h3, h4, h5 {
+    color: $blackText;
+}
+
 .container {
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
+}
+
+blockquote {
+    font-style: oblique;
+    position: relative;
+    background-color: #ececec4d;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 20px;
+    p {
+        display: inline;
+    }
+    &::before {
+        position: absolute;
+        content: open-quote;
+        font-size: 50px;
+        margin-left: -0.6em;
+        margin-top: -0.4em;
+        color: rgba(0, 0, 0, 0.507);
+    }
+    &:after {
+        position: absolute;
+        content: close-quote;
+        font-size: 50px;
+        bottom: 0;
+        right: 0;
+        margin-right: 20px;
+        margin-bottom: 0;
+        color: rgba(0, 0, 0, 0.514);
+    }
 }

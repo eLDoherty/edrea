@@ -1,3 +1,20 @@
 .edrea-single-post {
     padding: 30px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        &--left {
+            width: calc( 72% - 25px);
+            p, li {
+                font-size: 17px;
+                line-height: 1.6;
+                color: $blackParagraph;
+            }
+        }
+        &--right {
+            width: calc( 28% - 25px );
+            padding: 20px 0;
+        }
+    }
 }
