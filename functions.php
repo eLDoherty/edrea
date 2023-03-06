@@ -71,6 +71,11 @@ function edrea_setup() {
 			'flex-height' => true, 
 		)
 	);
+	
+	add_theme_support( "wp-block-styles" );
+	add_theme_support( "responsive-embeds" );
+	add_theme_support( "align-wide" );
+
 }
 
 /**
@@ -96,3 +101,8 @@ function edrea_widgets_init() {
  * Edrea functionality
  */
 require get_template_directory() . '/inc/edrea-functions.php';
+
+/**
+ * Edrea Nav Walker
+ */
+require get_template_directory() . '/inc/edrea-nav-walker.php';

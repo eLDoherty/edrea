@@ -83,7 +83,7 @@ function edrea_breadcrumbs_single_post() {
 	$cat_link = get_category_link( $category->cat_ID );
 	?>
 		<ul class="edrea-breadcrumbs">
-			<li><a href="<?php echo get_home_url(); ?>"><?php echo __( 'Blogs' ); ?></a><span>></span></li>
+			<li><a href="<?php echo get_home_url(); ?>"><?php echo __( 'Blogs', 'edrea' ); ?></a><span>></span></li>
 			<li><a href="<?php echo $cat_link; ?>"><?php echo $category->name; ?></a><span>></span></li>
 			<li><?php echo get_the_title(); ?></li>
 		</ul>

@@ -1,4 +1,4 @@
-<h3 style="margin-bottom: 5px; padding: 0px;"><?php echo __( "Share:" ); ?></h3>
+<h3 style="margin-bottom: 5px; padding: 0px;"><?php echo __( "Share:" , 'edrea' ); ?></h3>
 <ul class="edrea-social-sharer__wrapper">
     <li>
         <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_the_permalink();?>" title="Share on Facebook" target="_blank">
