@@ -53,7 +53,7 @@ jQuery(document).ready( function($) {
         $('.edrea-mobile-navigation').css({ left: '100%', opacity: '0'});
     })
     $('.menu-item-depth-0.menu-item-has-children').click( function(e) {
-        $(this).children('.menu-depth-1').toggle();
+        $(this).children('.menu-depth-1').slideToggle();
         $(this).toggleClass('menu-active');
     });
 

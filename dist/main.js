@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
     });
   });
   $('.menu-item-depth-0.menu-item-has-children').click(function (e) {
-    $(this).children('.menu-depth-1').toggle();
+    $(this).children('.menu-depth-1').slideToggle();
     $(this).toggleClass('menu-active');
   });
 });

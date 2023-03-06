@@ -144,7 +144,7 @@
     }
     .edrea-header__wrapper .edrea-mobile-navigation {
         position: absolute;
-        background-color: $primaryColor;
+        background-color: $darkBlue;
         right: 0;
         left: 100%;
         padding: 60px 20px;
@@ -153,6 +153,7 @@
         transition: 0.7s;
         bottom: 0;
         opacity: 0;
+        box-shadow: 30px 10px 70px 60px;
         .close-mobile-menu {
             position: absolute;
             top: 75px;
@@ -276,8 +277,4 @@
             height: auto;
         }
     }
-}
-
-@include mobileScreen {
-
 }

@@ -45,7 +45,7 @@
 						<?php echo get_search_form(); ?>
 					</div>
 					<div class="close-mobile-menu">
-						<img src="<?php echo get_template_directory_uri() . '/public/assets/icons/close.svg'; ?>" alt="Close button">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/public/assets/icons/close.svg' ); ?>" alt="Close button">
 					</div>
 					<nav id="mobile-navigation" class="edrea-mobile-navigation__holder">
 						<?php
@@ -60,7 +60,7 @@
 					</nav>
 				</div>
 				<div class="edrea-mobile-button">
-					<img src="<?php echo get_template_directory_uri() . '/public/assets/icons/mobile.svg'; ?>" alt="<?php echo get_bloginfo( 'name' ) . ' Mobile Icon'; ?>">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/public/assets/icons/mobile.svg' ); ?>" alt="<?php echo get_bloginfo( 'name' ) . ' Mobile Icon'; ?>">
 				</div>
 				<div class="site-search">
 					<?php echo get_search_form(); ?>

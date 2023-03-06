@@ -60,6 +60,16 @@ blockquote:after {
   color: rgba(0, 0, 0, 0.514);
 }
 
+@media (max-width: 1199.98px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  .container {
+    padding: 0 25px;
+  }
+}
 .edrea-main h1 {
   font-size: 38px;
   font-weight: 600;
@@ -119,6 +129,9 @@ blockquote:after {
 .edrea-archive-blog .swiper .swiper-button-next:hover, .edrea-archive-blog .swiper .swiper-button-prev:hover {
   background-color: #005792;
   color: #FFF;
+}
+.edrea-archive-blog .swiper .swiper-pagination {
+  display: none;
 }
 .edrea-archive-blog .swiper .swiper-button-prev {
   left: unset;
@@ -193,6 +206,37 @@ blockquote:after {
   z-index: 777;
 }
 
+@media (max-width: 1199.98px) {
+  .edrea-archive-blog__slider--item .trending-detail .trending-title {
+    font-size: 32px;
+  }
+  .edrea-archive-blog__slider--item .trending-detail .trending-excerpt {
+    font-size: 18px;
+  }
+  .edrea-archive-blog__slider--item .trending-detail .trending-button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991.98px) {
+  .edrea-archive-blog__slider--item {
+    flex-direction: column;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .edrea-archive-blog__slider--item .trending-thumbnail {
+    width: 100%;
+  }
+  .edrea-archive-blog__slider--item .trending-detail {
+    width: 100%;
+  }
+  .edrea-archive-blog .swiper .swiper-pagination {
+    display: block;
+    top: 470px;
+  }
+  .edrea-archive-blog .swiper .swiper-button-next, .edrea-archive-blog .swiper .swiper-button-prev {
+    display: none;
+  }
+}
 .edrea-single-post {
   padding: 30px 0;
 }
@@ -393,7 +437,7 @@ blockquote:after {
   }
   .edrea-header__wrapper .edrea-mobile-navigation {
     position: absolute;
-    background-color: #005792;
+    background-color: #06283d;
     right: 0;
     left: 100%;
     padding: 60px 20px;
@@ -402,6 +446,7 @@ blockquote:after {
     transition: 0.7s;
     bottom: 0;
     opacity: 0;
+    box-shadow: 30px 10px 70px 60px;
   }
   .edrea-header__wrapper .edrea-mobile-navigation .close-mobile-menu {
     position: absolute;

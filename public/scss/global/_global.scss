@@ -47,3 +47,15 @@ blockquote {
         color: rgba(0, 0, 0, 0.514);
     }
 }
+
+@include laptopScreen {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@include tabletScreen {
+    .container {
+        padding: 0 25px;
+    }
+}
