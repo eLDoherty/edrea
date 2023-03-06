@@ -61,10 +61,12 @@ get_header(); ?>
                 endif;
             ?> 
         </div>
-        <div class="edrea-load-more">
-            <input type="hidden" id="button-text" value="<?php echo __("All Caught");?>">
-            <button id="button-load-more" value="<?php echo admin_url('admin-ajax.php'); ?>"><?php echo __( 'Load more' ); ?></button>
-        </div>
+        <?php if( $query->have_posts() ) : ?>
+            <div class="edrea-load-more">
+                <input type="hidden" id="button-text" value="<?php echo __("All Caught");?>">
+                <button id="button-load-more" value="<?php echo admin_url('admin-ajax.php'); ?>"><?php echo __( 'Load more' ); ?></button>
+            </div>
+        <?php endif; ?>
     </div>
 </main>
 

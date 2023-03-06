@@ -10,9 +10,11 @@ $categories = get_the_category( get_the_ID() );
         <a href="<?php echo get_the_permalink(); ?>">
             <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
         </a>
-        <div class="article-date">
-            <span><?php echo get_the_date(); ?></span>
-        </div>
+        <?php if( get_the_post_thumbnail_url() ) : ?>
+            <div class="article-date">
+                <span><?php echo get_the_date(); ?></span>
+            </div>
+        <?php endif; ?>
         <?php if( $categories ) : ?>
         <div class="article-category">
             <?php $i = 0; foreach( $categories as $category ): $i++; 

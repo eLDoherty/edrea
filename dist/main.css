@@ -90,6 +90,9 @@ blockquote:after {
 .edrea-main a:hover {
   color: #e77221;
 }
+.edrea-main img {
+  max-width: 100%;
+}
 
 .edrea-archive-blog {
   margin: 60px 0;
@@ -267,6 +270,9 @@ blockquote:after {
   font-style: italic;
   margin-left: 20px;
   font-weight: 600;
+}
+.edrea-header__wrapper .site-branding img {
+  max-height: 80px;
 }
 .edrea-header__wrapper .main-navigation {
   width: calc(46% - 20px);
