@@ -96,3 +96,8 @@ function edrea_widgets_init() {
  * Edrea functionality
  */
 require get_template_directory() . '/inc/edrea-functions.php';
+
+/**
+ * Edrea Nav Walker
+ */
+require get_template_directory() . '/inc/edrea-nav-walker.php';

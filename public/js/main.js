@@ -3,6 +3,8 @@ jQuery(document).ready( function($) {
     // Masonry layout
     $('.edrea-masonry').masonry({
         itemSelector: '.edrea-card',
+        gutter : 0,
+        stagger: 30,
     });
 
     // Ajax Load More
@@ -30,6 +32,7 @@ jQuery(document).ready( function($) {
                     var $content = $( res );
                     $('#button-load-more').text('Load more');
                     $('.edrea-masonry').append( $content ).masonry( 'appended', $content );
+                    $('.edrea-masonry').masonry('reloadItems');
                     $('html, body').animate({
                         scrollTop: $("#button-load-more").offset().top
                     }, 200);
