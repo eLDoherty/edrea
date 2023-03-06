@@ -1,16 +1,16 @@
 <?php 
 
 $args = array(
-    'prev_text'          => __( 'Older' ),
-    'next_text'          => __( 'Newest' ),
-    'screen_reader_text' => __( 'Posts navigation' ),
-    'aria_label'         => __( 'Posts' ),
+    'prev_text'          => __( 'Older', 'edrea' ),
+    'next_text'          => __( 'Newest', 'edrea' ),
+    'screen_reader_text' => __( 'Posts navigation'. 'edrea' ),
+    'aria_label'         => __( 'Posts', 'edrea' ),
     'class'              => 'posts-navigation',
 );
 
 get_header(); ?>
 
-<main id="primary" class="edrea-archive-blog">
+<main id="post-<?php the_ID(); ?>" class="edrea-archive-blog <?php post_class(); ?>">
     <div class="container">
         <div class="edrea-archive-blog__wrapper edrea-masonry">
             <?php if ( have_posts() ) : 
@@ -27,6 +27,7 @@ get_header(); ?>
             ?> 
         </div>
         <?php the_posts_navigation( $args ); ?>
+        <?php wp_link_pages(); ?>
     </div>
 </main>
 

@@ -20,7 +20,7 @@ get_header(); ?>
                         <p class="edrea-author-name"><?php echo $author_display_name; ?></p>
                     </div>
                     <div class="post-date">
-                        <img src="<?php echo get_template_directory_uri() . '/public/assets/icons/calendar.svg'; ?>" alt="<?php echo __( "Post date" ); ?>">
+                        <img src="<?php echo esc_attr__( get_template_directory_uri() . '/public/assets/icons/calendar.svg' , 'edrea' ); ?>" alt="<?php echo __( "Post date", 'edrea' ); ?>">
                         <p class="post-date"><?php echo get_the_date(); ?></p>
                     </div>
                 </div>

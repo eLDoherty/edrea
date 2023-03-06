@@ -1,5 +1,16 @@
 .wp-block-latest-posts.wp-block-latest-posts__list li {
     margin-bottom: 30px;
 }
-
-
+.edrea-input-search {
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+    span {
+        color: $orange;
+    }
+}
+.search-empty {
+    font-size: 17px;
+    text-align: center;
+    color: $blackText;
+}

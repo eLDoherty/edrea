@@ -71,6 +71,11 @@ function edrea_setup() {
 			'flex-height' => true, 
 		)
 	);
+	
+	add_theme_support( "wp-block-styles" );
+	add_theme_support( "responsive-embeds" );
+	add_theme_support( "align-wide" );
+
 }
 
 /**
