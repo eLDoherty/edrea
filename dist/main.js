@@ -73,9 +73,9 @@ jQuery(document).ready(function ($) {
       opacity: '0'
     });
   });
-  $('.menu-item-has-children').click(function (e) {
-    e.preventDefault();
+  $('.menu-item-depth-0.menu-item-has-children').click(function (e) {
     $(this).children('.menu-depth-1').toggle();
+    $(this).toggleClass('menu-active');
   });
 });
 }();

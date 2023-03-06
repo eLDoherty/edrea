@@ -434,6 +434,9 @@ blockquote:after {
   .edrea-header__wrapper .edrea-mobile-navigation__holder {
     margin-top: 40px;
   }
+  .edrea-header__wrapper .edrea-mobile-navigation__holder .menu-depth-1, .edrea-header__wrapper .edrea-mobile-navigation__holder .menu-depth-2 {
+    padding-left: 15px;
+  }
   .edrea-header__wrapper .edrea-mobile-navigation__holder .menu {
     margin: 0;
     padding: 0;
@@ -441,15 +444,58 @@ blockquote:after {
   .edrea-header__wrapper .edrea-mobile-navigation__holder .menu li {
     list-style: none;
     margin-bottom: 8px;
+    padding: 10px 0;
   }
   .edrea-header__wrapper .edrea-mobile-navigation__holder .menu li a {
     color: #FFF;
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
+    text-transform: uppercase;
   }
   .edrea-header__wrapper .edrea-mobile-navigation__holder .menu .sub-menu-item {
     margin-top: 5px;
+  }
+  .edrea-header__wrapper .edrea-mobile-navigation__holder .menu .menu-depth-1, .edrea-header__wrapper .edrea-mobile-navigation__holder .menu .menu-depth-2 {
+    display: none;
+    margin-top: 10px;
+  }
+  .edrea-header__wrapper .edrea-mobile-navigation__holder .menu .menu-active::after {
+    position: absolute;
+    content: "-" !important;
+    width: 50px;
+    height: 50px;
+    display: block;
+    right: 0px;
+    color: #FFF;
+    top: -28px !important;
+    font-weight: 700;
+    font-size: 60px !important;
+  }
+  .edrea-header__wrapper .edrea-mobile-navigation__holder .menu .menu-item-depth-1 {
+    padding: 0;
+    margin: 5px 0;
+  }
+  .edrea-header__wrapper .edrea-mobile-navigation__holder .menu .menu-item-depth-1 a {
+    font-size: 16px;
+  }
+  .edrea-header__wrapper .edrea-mobile-navigation__holder .menu-item-depth-0.menu-item-has-children {
+    position: relative;
+  }
+  .edrea-header__wrapper .edrea-mobile-navigation__holder .menu-item-depth-0.menu-item-has-children:after {
+    position: absolute;
+    content: "+";
+    width: 50px;
+    height: 50px;
+    display: block;
+    right: 0px;
+    color: #FFF;
+    top: -11px;
+    font-weight: 700;
+    font-size: 40px;
+  }
+  .edrea-header__wrapper .edrea-mobile-navigation__holder .menu-item-depth-0:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.486);
   }
 }
 @media (max-width: 767.98px) {

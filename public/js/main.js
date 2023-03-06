@@ -52,9 +52,9 @@ jQuery(document).ready( function($) {
     $('.close-mobile-menu').click( function() {
         $('.edrea-mobile-navigation').css({ left: '100%', opacity: '0'});
     })
-    $('.menu-item-has-children').click( function(e) {
-        e.preventDefault();
+    $('.menu-item-depth-0.menu-item-has-children').click( function(e) {
         $(this).children('.menu-depth-1').toggle();
+        $(this).toggleClass('menu-active');
     });
 
 });
