@@ -70,13 +70,19 @@
                 }
             }
             .menu-depth-2 {
-                display: none;
+                display: none;  
                 padding: 3px;
                 li {
                     list-style: circle;
                     color: $white;
                 }
             }
+        }
+        .edrea-mobile-navigation {
+            display: none;
+        }
+        .edrea-mobile-button {
+            display: none;
         }
         .site-search {
             width: calc(27% - 20px);
@@ -103,4 +109,128 @@
             }
         }
     }
+}
+
+// Responsiveness
+
+@include desktopScreen {
+    .edrea-header__wrapper .site-search {
+        width: calc( 30% - 20px );
+    }
+}
+
+@include laptopScreen {
+    .edrea-header__wrapper .main-navigation ul li a {
+        font-size: 14px;
+    }
+    .edrea-header__wrapper .site-branding {
+        width: calc( 20% - 20px );
+    }
+    .edrea-header__wrapper .site-search {
+        width: calc( 35% - 20px );
+    }
+    .edrea-header__wrapper .site-search input {
+        padding: 7px;
+        font-size: 14px;
+    }
+    .edrea-header__wrapper .site-search input[type=submit] {
+        padding: 7px 15px;
+    }
+}
+
+@include tabletScreen {
+    .edrea-header__wrapper .site-search input {
+        margin-bottom: 10px;
+    }
+    .edrea-header__wrapper .edrea-mobile-navigation {
+        position: absolute;
+        background-color: $primaryColor;
+        right: 0;
+        left: 100%;
+        padding: 60px 20px;
+        z-index: 998;
+        top: 0;
+        transition: 0.7s;
+        bottom: 0;
+        opacity: 0;
+        .close-mobile-menu {
+            position: absolute;
+            top: 75px;
+            right: 25px;
+            z-index: 909;
+            cursor: pointer;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .mobile-search {
+            width: calc(27% - 20px);
+            text-align: right;
+            margin-top: 20px;
+            input {
+                border: none;
+                font-size: 15px;
+                padding: 10px;
+                border-radius: 5px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            input[type=submit] {
+                display: none;
+            }
+        }
+        &__holder {
+            margin-top: 40px;
+            .menu {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    margin-bottom: 8px;
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                }
+                .sub-menu-item {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+@include landscapeScreen {
+    .edrea-header__wrapper .main-navigation {
+        display: none;
+    }
+    .edrea-header__wrapper .site-search {
+        display: none;
+    }
+    .edrea-header__wrapper .edrea-mobile-navigation {
+        display: block;
+    }
+    .edrea-header__wrapper .edrea-mobile-button {
+        display: block;
+        cursor: pointer;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .edrea-header__wrapper .site-branding {
+        width: calc( 45% - 20px );
+        img {
+            width: 120px;
+            height: auto;
+        }
+    }
+}
+
+@include mobileScreen {
+
 }

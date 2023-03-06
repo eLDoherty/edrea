@@ -59,6 +59,24 @@ jQuery(document).ready(function ($) {
       }
     });
   });
+
+  // Mobile menu button handler
+  $('.edrea-mobile-button').click(function () {
+    $('.edrea-mobile-navigation').css({
+      left: '40px',
+      opacity: '1'
+    });
+  });
+  $('.close-mobile-menu').click(function () {
+    $('.edrea-mobile-navigation').css({
+      left: '100%',
+      opacity: '0'
+    });
+  });
+  $('.menu-item-has-children').click(function (e) {
+    e.preventDefault();
+    $(this).children('.menu-depth-1').toggle();
+  });
 });
 }();
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.

@@ -40,7 +40,28 @@
 						);
 					?>
 				</nav>
-
+				<div class="edrea-mobile-navigation">
+					<div class="mobile-search">
+						<?php echo get_search_form(); ?>
+					</div>
+					<div class="close-mobile-menu">
+						<img src="<?php echo get_template_directory_uri() . '/public/assets/icons/close.svg'; ?>" alt="Close button">
+					</div>
+					<nav id="mobile-navigation" class="edrea-mobile-navigation__holder">
+						<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+									'walker'		=> new Edrea_Nav_Walker,
+								)
+							);
+						?>
+					</nav>
+				</div>
+				<div class="edrea-mobile-button">
+					<img src="<?php echo get_template_directory_uri() . '/public/assets/icons/mobile.svg'; ?>" alt="<?php echo get_bloginfo( 'name' ) . ' Mobile Icon'; ?>">
+				</div>
 				<div class="site-search">
 					<?php echo get_search_form(); ?>
 				</div>

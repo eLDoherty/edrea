@@ -4,3 +4,28 @@ $tablet: 991.98px;
 $laptop: 1199.98px;
 $desktop: 1399.98px;
 
+@mixin mobileScreen {
+    @media(max-width: $mobile) {
+        @content;
+    }
+}
+@mixin landscapeScreen {
+    @media(max-width: $landscape) {
+      @content;
+    }
+}
+@mixin tabletScreen {
+    @media(max-width: $tablet) {
+        @content;
+    }
+}
+@mixin laptopScreen {
+    @media(max-width: $laptop) {
+        @content;
+    }
+}
+@mixin desktopScreen {
+  @media(max-width: $desktop) {
+      @content;
+  }
+}
