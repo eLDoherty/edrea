@@ -31,6 +31,6 @@ $categories = get_the_category( get_the_ID() );
     <?php endif; ?>
     <div class="edrea-card__detail">
         <a href="<?php echo get_the_permalink(); ?>"><h1 class="article-title"><?php echo get_the_title(); ?></h1></a>
-        <p class="article-excerpt"><?php echo $excerpt; ?> . . . <a href="<?php echo get_the_permalink(); ?>">read more</a></p>
+        <p class="article-excerpt"><?php echo $excerpt; ?> . . . <a href="<?php echo get_the_permalink(); ?>"><?php echo __( 'read more', 'edrea' ); ?></a></p>
     </div>
 </article>
