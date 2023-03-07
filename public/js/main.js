@@ -6,20 +6,20 @@ jQuery(document).ready( function($) {
         gutter : 0,
         stagger: 30,
         percentPosition: true,
+        transitionDuration: '2.5s',
         columnWidth: '.edrea-grid-sizer'
     });
 
     // Ajax Load More
     var ajax_url = $('#button-load-more').val();
     var total_posts = 1;
-    $('#button-load-more').click( function( e ) {
+    $('#button-load-more').click( function(e) {
 
         e.preventDefault();
 
         total_posts += 1;
 
         $(this).text('Loading...');
-
         $.ajax({
             type: "POST", 
             url: ajax_url,
@@ -33,8 +33,8 @@ jQuery(document).ready( function($) {
                 if( res ) {
                     var $content = $( res );
                     $('#button-load-more').text('Load more');
-                    $('.edrea-masonry').append( $content ).masonry( 'appended', $content );
-                    $('.edrea-masonry').masonry('reloadItems');
+                    $('.edrea-masonry').append( $content );
+                    $('.edrea-masonry').masonry( 'appended', $content );
                     $('html, body').animate({
                         scrollTop: $("#button-load-more").offset().top
                     }, 200);

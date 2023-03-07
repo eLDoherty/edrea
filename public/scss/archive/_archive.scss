@@ -137,6 +137,7 @@
     .edrea-archive-blog .swiper .swiper-pagination {
         display: block;
         top: 470px;
+        bottom: unset !important;
     }
     .edrea-archive-blog .swiper .swiper-button-next, .edrea-archive-blog .swiper .swiper-button-prev {
         display: none;

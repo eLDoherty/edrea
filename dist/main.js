@@ -28,6 +28,7 @@ jQuery(document).ready(function ($) {
     gutter: 0,
     stagger: 30,
     percentPosition: true,
+    transitionDuration: '2.5s',
     columnWidth: '.edrea-grid-sizer'
   });
 
@@ -50,8 +51,8 @@ jQuery(document).ready(function ($) {
         if (res) {
           var $content = $(res);
           $('#button-load-more').text('Load more');
-          $('.edrea-masonry').append($content).masonry('appended', $content);
-          $('.edrea-masonry').masonry('reloadItems');
+          $('.edrea-masonry').append($content);
+          $('.edrea-masonry').masonry('appended', $content);
           $('html, body').animate({
             scrollTop: $("#button-load-more").offset().top
           }, 200);

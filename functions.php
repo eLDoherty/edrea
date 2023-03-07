@@ -25,7 +25,7 @@ add_action( 'after_setup_theme', 'edrea_setup' );
 
 function edrea_setup() {
 
-	load_theme_textdomain( 'pine', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'edrea', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );

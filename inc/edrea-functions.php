@@ -57,11 +57,13 @@ function edrea_load_more() {
 
 	$query = new WP_Query( $args );
 
+	$html = '';
+
 	while( $query->have_posts() ) {
 
 		$query->the_post();
 
-		$html = get_template_part( 'template-parts/content', get_post_type() );
+		$html .= get_template_part( 'template-parts/content', get_post_type() );
 
 	}
 

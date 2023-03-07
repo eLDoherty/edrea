@@ -15,7 +15,7 @@
         &--right {
             width: calc( 28% - 25px );
             padding: 20px 0;
-
+ 
         }
     }
     &__title {
@@ -53,6 +53,18 @@
                 text-transform: uppercase;
                 font-size: 15px;
             }
+        }
+    }
+}
+
+// Responsiveness
+
+@include tabletScreen {
+
+    .edrea-single-post__wrapper {
+        flex-direction: column;
+        &--left, &--right {
+            width: 100%;
         }
     }
 }

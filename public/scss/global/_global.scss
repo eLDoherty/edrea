@@ -48,6 +48,31 @@ blockquote {
     }
 }
 
+.wp-caption, .wp-caption-text, .gallery-caption, .bypostauthor {
+    font-size: 13px;
+    font-weight: 400;
+    color: $blackText;
+}
+
+.alignright {
+    text-align: right;
+}
+.alignleft {
+    text-align: left;
+}
+.aligncenter {
+    text-align: center;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.edrea-full-width {
+    width: 100% !important;
+}
+
+
 @include laptopScreen {
     .container {
         padding: 0 40px;

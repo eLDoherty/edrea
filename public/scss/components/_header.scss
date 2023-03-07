@@ -147,13 +147,14 @@
         background-color: $darkBlue;
         right: 0;
         left: 100%;
-        padding: 60px 20px;
+        padding: 60px 0;
         z-index: 998;
         top: 0;
         transition: 0.7s;
         bottom: 0;
         opacity: 0;
         box-shadow: 30px 10px 70px 60px;
+        overflow: hidden;
         .close-mobile-menu {
             position: absolute;
             top: 75px;
@@ -169,6 +170,7 @@
             width: calc(27% - 20px);
             text-align: right;
             margin-top: 20px;
+            margin-left: 20px;
             input {
                 border: none;
                 font-size: 15px;
@@ -190,6 +192,7 @@
             .menu {
                 margin: 0;
                 padding: 0;
+                margin-left: 20px;
                 li {
                     list-style: none;
                     margin-bottom: 8px;
