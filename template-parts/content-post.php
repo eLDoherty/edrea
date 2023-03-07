@@ -5,7 +5,7 @@ $categories = get_the_category( get_the_ID() );
 
 ?>
 
-<article class="edrea-card article-<?php echo get_the_ID(); ?>">
+<article class="edrea-card article-<?php echo get_the_ID(); ?> edrea-grid-sizer">
     <div class="edrea-card__thumbnail">
         <a href="<?php echo get_the_permalink(); ?>">
             <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">

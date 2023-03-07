@@ -26,7 +26,9 @@ jQuery(document).ready(function ($) {
   $('.edrea-masonry').masonry({
     itemSelector: '.edrea-card',
     gutter: 0,
-    stagger: 30
+    stagger: 30,
+    percentPosition: true,
+    columnWidth: '.edrea-grid-sizer'
   });
 
   // Ajax Load More

@@ -5,6 +5,8 @@ jQuery(document).ready( function($) {
         itemSelector: '.edrea-card',
         gutter : 0,
         stagger: 30,
+        percentPosition: true,
+        columnWidth: '.edrea-grid-sizer'
     });
 
     // Ajax Load More

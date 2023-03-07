@@ -69,3 +69,36 @@
         }
     }
 }
+
+// Responsiveness
+
+@include mobileScreen {
+
+    .edrea-grid-sizer {
+        width: 100% !important;
+    } 
+    .edrea-card__detail a h1 {
+        font-size: 26px !important;
+    }
+    .edrea-card__detail p {
+        font-size: 17px !important;
+    }
+
+}
+
+@include landscapeScreen {
+
+    .edrea-grid-sizer {
+        width: calc(48% - 20px);
+    }
+
+}
+
+@include laptopScreen {
+    .edrea-card__detail a h1 {
+        font-size: 21px;
+    }
+    .edrea-card__detail p {
+        font-size: 14px;
+    }
+}
