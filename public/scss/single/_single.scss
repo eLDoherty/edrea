@@ -19,7 +19,9 @@
         }
     }
     &__title {
-        margin-bottom: 0;
+        margin-bottom: 10px;
+        word-break: break-all;
+        line-height: 1.25;
     }
     &__meta {
         display: flex;
@@ -66,5 +68,26 @@
         &--left, &--right {
             width: 100%;
         }
+    }
+
+    body .edrea-single-post__title {
+        font-size: 32px;
+    }
+
+}
+
+@include landscapeScreen {
+    .edrea-single-post__meta .post-date p {
+        font-size: 13px;
+    }
+    .edrea-single-post__meta--author .edrea-author-name {
+        font-size: 13px;
+    }
+}
+
+@include mobileScreen {
+
+    body .edrea-single-post__title {
+        font-size: 30px;
     }
 }

@@ -50,3 +50,18 @@
         }
     }
 }
+
+// Responsiveness
+
+@include landscapeScreen {
+    .edrea-social-sharer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .edrea-social-sharer h3 {
+        margin-bottom: 10px;
+    }
+    .edrea-social-sharer__wrapper {
+        padding-left: 0 !important;
+    }
+}

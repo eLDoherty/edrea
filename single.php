@@ -27,15 +27,15 @@ get_header(); ?>
                     </div>
                 </div>
                 <?php echo the_content(); ?>
+                <div class="edrea-social-sharer">
+                    <?php echo get_template_part( '/utils/social-sharer' ); ?>
+                </div>
             </div>
             <?php if( is_active_sidebar( 'edrea-sidebar' ) ) : ?>
                 <div class="edrea-single-post__wrapper--right">                
                     <?php get_sidebar(); ?>
                 </div>
             <?php endif; ?>
-        </div>
-        <div class="edrea-social-sharer">
-            <?php echo get_template_part( '/utils/social-sharer' ); ?>
         </div>
         <?php
             // If comments are open or we have at least one comment, load up the comment template.

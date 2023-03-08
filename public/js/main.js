@@ -20,6 +20,7 @@ jQuery(document).ready( function($) {
         total_posts += 1;
 
         $(this).text('Loading...');
+        
         $.ajax({
             type: "POST", 
             url: ajax_url,

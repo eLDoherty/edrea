@@ -12,7 +12,7 @@ function edrea_trending_posts() {
 	 
 	$query = new WP_Query( $args );
 
-	$post_slider_id = array();
+	$post_slider_content = array();
 
 	while( $query->have_posts() ) {
 
@@ -30,13 +30,13 @@ function edrea_trending_posts() {
 				'thumbnail_url' => get_the_post_thumbnail_url( get_the_ID() )
 			);
 
-			array_push( $post_slider_id, $post_detail );
+			array_push( $post_slider_content, $post_detail );
 
 		}
 
 	}
 
-	return $post_slider_id;
+	return $post_slider_content;
 
 }
 
@@ -75,7 +75,7 @@ function edrea_load_more() {
 
 /**
  * Edrea Custom Breadcrumbs
- * Only show in single-post, in other page will doesn't work correctly 
+ * Only show in single-post, in other page will not work correctly 
  * 
  * @return breadcrumbs
  */
@@ -83,18 +83,18 @@ function edrea_breadcrumbs_single_post() {
 
 	$category = get_the_category( get_the_ID() )[0];
 	$cat_link = get_category_link( $category->cat_ID );
+	$title = substr( get_the_title(), 0 , 20 ) . '...';
 	?>
 		<ul class="edrea-breadcrumbs">
 			<li><a href="<?php echo get_home_url(); ?>"><?php echo __( 'Blogs', 'edrea' ); ?></a><span>></span></li>
 			<li><a href="<?php echo $cat_link; ?>"><?php echo $category->name; ?></a><span>></span></li>
-			<li><?php echo get_the_title(); ?></li>
+			<li><?php echo $title; ?></li>
 		</ul>
 	<?php
 }
 
 /**
  * Edrea show 5 recent post
- * Curre
  */
 function edrea_recent_post_data() {
 
@@ -119,8 +119,10 @@ function edrea_recent_post_data() {
 
 			array_push( $recent_posts, $query_recent_post );
 		}
+
 		wp_reset_postdata();	
 	}
+
 
 	return $recent_posts;
 	

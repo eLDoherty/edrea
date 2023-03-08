@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: $sarabun;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5 {
@@ -19,7 +20,6 @@ h1, h2, h3, h4, h5 {
 
 blockquote {
     font-style: oblique;
-    position: relative;
     background-color: #ececec4d;
     padding: 40px;
     margin: 20px 0;
@@ -36,16 +36,16 @@ blockquote {
         margin-top: -0.4em;
         color: rgba(0, 0, 0, 0.507);
     }
-    &:after {
-        position: absolute;
-        content: close-quote;
-        font-size: 50px;
-        bottom: 0;
-        right: 0;
-        margin-right: 20px;
-        margin-bottom: 0;
-        color: rgba(0, 0, 0, 0.514);
-    }
+    // &:after {
+    //     position: absolute;
+    //     content: close-quote;
+    //     font-size: 50px;
+    //     bottom: 0;
+    //     right: 0;
+    //     margin-right: 20px;
+    //     margin-bottom: 0;
+    //     color: rgba(0, 0, 0, 0.514);
+    // }
 }
 
 .wp-caption, .wp-caption-text, .gallery-caption, .bypostauthor {

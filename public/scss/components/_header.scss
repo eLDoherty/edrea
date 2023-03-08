@@ -1,6 +1,7 @@
 .edrea-header {
     padding: 30px 0;
     background-color: $primaryColor;
+    z-index: 999;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -139,11 +140,15 @@
 }
 
 @include tabletScreen {
+    .edrea-header {
+        position: sticky;
+        top: 0;
+    }
     .edrea-header__wrapper .site-search input {
         margin-bottom: 10px;
     }
     .edrea-header__wrapper .edrea-mobile-navigation {
-        position: absolute;
+        position: fixed;
         background-color: $darkBlue;
         right: 0;
         left: 100%;
