@@ -15,6 +15,7 @@ function edrea_enqueue_scripts() {
     wp_enqueue_script( 'vanila', get_template_directory_uri() . '/dist/vanila.js', array( 'jquery' ) );
     wp_enqueue_script( 'masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array( 'jquery' ) );
     wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'imageLoad', 'https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js', array( 'jquery' ) );
 
 }
 

@@ -30,9 +30,15 @@ get_header(); ?>
                 <div class="edrea-social-sharer">
                     <?php echo get_template_part( '/utils/social-sharer' ); ?>
                 </div>
-                <div class="edrea-tags">
-                    <p>Tags: <?php echo get_the_tag_list(); ?></p>
-                </div>
+                <?php if( get_the_tags() ) : ?>
+                    <div class="edrea-tags">
+                        <p>Tags: 
+                            <?php foreach( get_the_tags() as $tag ) : ?>
+                                <a href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a>
+                            <?php endforeach; ?>
+                        </p>
+                    </div>
+                <?php endif; ?>
             </div>
             <?php if( is_active_sidebar( 'edrea-sidebar' ) ) : ?>
                 <div class="edrea-single-post__wrapper--right">                

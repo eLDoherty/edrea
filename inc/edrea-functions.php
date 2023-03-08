@@ -52,7 +52,7 @@ function edrea_load_more() {
 
 	$args = array(
 		'post_type' => 'post',
-		'paged' => $page_order
+		'paged' => $page_order,
 	);
 
 	$query = new WP_Query( $args );

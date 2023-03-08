@@ -388,6 +388,16 @@ figure {
     font-size: 30px;
   }
 }
+.edrea-page-not-found {
+  padding: 80px 0;
+  text-align: center;
+}
+.edrea-page-not-found a {
+  text-decoration: none;
+  color: #e77221;
+  font-weight: 600;
+}
+
 .edrea-header {
   padding: 30px 0;
   background-color: #005792;
@@ -744,10 +754,6 @@ figure {
   margin-right: 30px;
   border-radius: 8px;
   margin-bottom: 30px;
-  transition: 0.3s;
-}
-.edrea-card:hover {
-  transform: translateY(-5px);
 }
 .edrea-card__thumbnail {
   position: relative;
@@ -973,7 +979,7 @@ figure {
     align-items: center;
   }
   .edrea-social-sharer h3 {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
   }
   .edrea-social-sharer__wrapper {
     padding-left: 0 !important;
