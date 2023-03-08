@@ -5,8 +5,20 @@ body {
     margin: 0;
     padding: 0;
     font-family: $sarabun;
+    scroll-behavior: smooth;
 }
-
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
 h1, h2, h3, h4, h5 {
     color: $blackText;
 }
@@ -19,7 +31,6 @@ h1, h2, h3, h4, h5 {
 
 blockquote {
     font-style: oblique;
-    position: relative;
     background-color: #ececec4d;
     padding: 40px;
     margin: 20px 0;
@@ -36,14 +47,54 @@ blockquote {
         margin-top: -0.4em;
         color: rgba(0, 0, 0, 0.507);
     }
-    &:after {
-        position: absolute;
-        content: close-quote;
-        font-size: 50px;
-        bottom: 0;
-        right: 0;
-        margin-right: 20px;
-        margin-bottom: 0;
-        color: rgba(0, 0, 0, 0.514);
+    // &:after {
+    //     position: absolute;
+    //     content: close-quote;
+    //     font-size: 50px;
+    //     bottom: 0;
+    //     right: 0;
+    //     margin-right: 20px;
+    //     margin-bottom: 0;
+    //     color: rgba(0, 0, 0, 0.514);
+    // }
+}
+
+.wp-caption, .wp-caption-text, .gallery-caption, .bypostauthor {
+    font-size: 13px;
+    font-weight: 400;
+    color: $blackText;
+}
+
+.alignright {
+    text-align: right;
+}
+.alignleft {
+    text-align: left;
+}
+.aligncenter {
+    text-align: center;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.edrea-full-width {
+    width: 100% !important;
+}
+
+figure {
+    width: 100% !important;
+}
+
+@include laptopScreen {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@include tabletScreen {
+    .container {
+        padding: 0 25px;
     }
 }

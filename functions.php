@@ -15,6 +15,7 @@ function edrea_enqueue_scripts() {
     wp_enqueue_script( 'vanila', get_template_directory_uri() . '/dist/vanila.js', array( 'jquery' ) );
     wp_enqueue_script( 'masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array( 'jquery' ) );
     wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'imageLoad', 'https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js', array( 'jquery' ) );
 
 }
 
@@ -25,7 +26,7 @@ add_action( 'after_setup_theme', 'edrea_setup' );
 
 function edrea_setup() {
 
-	load_theme_textdomain( 'pine', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'edrea', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -71,6 +72,11 @@ function edrea_setup() {
 			'flex-height' => true, 
 		)
 	);
+	
+	add_theme_support( "wp-block-styles" );
+	add_theme_support( "responsive-embeds" );
+	add_theme_support( "align-wide" );
+
 }
 
 /**
@@ -96,3 +102,8 @@ function edrea_widgets_init() {
  * Edrea functionality
  */
 require get_template_directory() . '/inc/edrea-functions.php';
+
+/**
+ * Edrea Nav Walker
+ */
+require get_template_directory() . '/inc/edrea-nav-walker.php';

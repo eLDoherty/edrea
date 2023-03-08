@@ -1,6 +1,7 @@
 .edrea-header {
     padding: 30px 0;
     background-color: $primaryColor;
+    z-index: 999;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -31,6 +32,7 @@
                 padding-left: 0;
                 li {
                     margin: 0 15px;
+                    padding: 10px 0;
                     a {
                         color: $white;
                         text-decoration: none;
@@ -43,6 +45,48 @@
                     }
                 }
             }
+            .menu-item-has-children {
+                position: relative;
+                &:hover > .menu-depth-1 {
+                    display: flex;
+                }
+            }
+            .menu-depth-1 {
+                display: none;
+                position: absolute;
+                background-color: $primaryColor;
+                border-bottom: 3px solid $orange;
+                .menu-item-depth-1:hover > .menu-depth-2 {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .sub-menu {
+                min-width: 200px;
+                padding: 7px;
+                flex-direction: column;
+                left: -20px;
+                top: 40px;
+                border-radius: 0px 0px 3px 3px;
+                z-index: 888;
+                li {
+                    padding: 5px 0;
+                }
+            }
+            .menu-depth-2 {
+                display: none;  
+                padding: 3px;
+                li {
+                    list-style: circle;
+                    color: $white;
+                }
+            }
+        }
+        .edrea-mobile-navigation {
+            display: none;
+        }
+        .edrea-mobile-button {
+            display: none;
         }
         .site-search {
             width: calc(27% - 20px);
@@ -57,16 +101,192 @@
                 }
             }
             input[type=submit] {
-                background-color: $secondaryColor;
+                background-color: $orange;
                 color: $white;
                 font-weight: 500;
                 padding: 10px 20px;
                 cursor: pointer;
                 transition: 0.3s;
                 &:hover {
-                    background-color: $green;
+                    background-color: $secondaryColor;
                 }
             }
+        }
+    }
+}
+
+// Responsiveness
+
+@include desktopScreen {
+    .edrea-header__wrapper .site-search {
+        width: calc( 30% - 20px );
+    }
+} 
+
+@include laptopScreen {
+    .edrea-header__wrapper .main-navigation ul li a {
+        font-size: 14px;
+    }
+    .edrea-header__wrapper .site-branding {
+        width: calc( 20% - 20px );
+    }
+    .edrea-header__wrapper .site-search {
+        width: calc( 35% - 20px );
+    }
+    .edrea-header__wrapper .site-search input {
+        padding: 7px;
+        font-size: 14px;
+    }
+    .edrea-header__wrapper .site-search input[type=submit] {
+        padding: 7px 15px;
+    }
+}
+
+@include tabletScreen {
+    .edrea-header {
+        position: sticky;
+        top: 0;
+        padding: 20px 0;
+    }
+    .edrea-header__wrapper .site-search input {
+        margin-bottom: 10px;
+    }
+    .edrea-header__wrapper .edrea-mobile-navigation {
+        position: fixed;
+        background-color: $darkBlue;
+        right: 0;
+        left: 100%;
+        padding: 60px 0;
+        z-index: 998;
+        top: 0;
+        transition: 0.7s;
+        bottom: 0;
+        opacity: 0;
+        box-shadow: 30px 10px 70px 60px;
+        overflow: hidden;
+        .close-mobile-menu {
+            position: absolute;
+            top: 75px;
+            right: 25px;
+            z-index: 909;
+            cursor: pointer;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .mobile-search {
+            width: calc(27% - 20px);
+            text-align: right;
+            margin-top: 20px;
+            margin-left: 20px;
+            input {
+                border: none;
+                font-size: 15px;
+                padding: 10px;
+                border-radius: 5px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            input[type=submit] {
+                display: none;
+            }
+        }
+        &__holder {
+            margin-top: 40px;
+            .menu-depth-1, .menu-depth-2 {
+                padding-left: 15px;
+            }
+            .menu {
+                margin: 0;
+                padding: 0;
+                margin-left: 20px;
+                li {
+                    list-style: none;
+                    margin-bottom: 8px;
+                    padding: 10px 0;
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                        font-weight: 600;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                    }
+                }
+                .sub-menu-item {
+                    margin-top: 5px;
+                }
+               .menu-depth-1, .menu-depth-2 {
+                    display: none;
+                    margin-top: 10px;
+               } 
+               .menu-active::after {
+                    position: absolute;
+                    content: '-' !important;
+                    width: 50px;
+                    height: 50px;
+                    display: block;
+                    right: 0px;
+                    color: $white;
+                    top: -28px !important;
+                    font-weight: 700;
+                    font-size: 60px !important;
+               }
+               .menu-item-depth-1{
+                    padding: 0;
+                    margin: 5px 0;
+                    a {
+                        font-size: 16px;
+                    }
+               } 
+            }
+            .menu-item-depth-0.menu-item-has-children {
+                position: relative;
+                &:after {
+                    position: absolute;
+                    content: '+';
+                    width: 50px;
+                    height: 50px;
+                    display: block;
+                    right: 0px;
+                    color: $white;
+                    top: -5px;
+                    font-weight: 700;
+                    font-size: 35px;
+                }
+                
+            }
+            .menu-item-depth-0:not(:last-child) {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.486);
+            }
+        }
+    }
+}
+
+@include landscapeScreen {
+    .edrea-header__wrapper .main-navigation {
+        display: none;
+    }
+    .edrea-header__wrapper .site-search {
+        display: none;
+    }
+    .edrea-header__wrapper .edrea-mobile-navigation {
+        display: block;
+    }
+    .edrea-header__wrapper .edrea-mobile-button {
+        display: block;
+        cursor: pointer;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .edrea-header__wrapper .site-branding {
+        width: calc( 45% - 20px );
+        img {
+            width: 120px;
+            height: auto;
         }
     }
 }

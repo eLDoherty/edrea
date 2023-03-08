@@ -4,10 +4,10 @@
     margin-right: 30px;
     border-radius: 8px;
     margin-bottom: 30px;
-    transition: 0.3s;
-    &:hover {
-        transform: translateY(-5px);
-    }
+    // // transition: 0.3s;
+    // &:hover {
+    //     transform: translateY(-5px);
+    // }
     &__thumbnail { 
         position: relative;
         padding: 10px;
@@ -57,6 +57,7 @@
             h1 {
                 margin: 0;
                 color: $primaryColor;
+                word-wrap: break-word;
             }
         }
         p {
@@ -67,5 +68,38 @@
                 font-weight: 600;
             }
         }
+    }
+}
+
+// Responsiveness
+
+@include mobileScreen {
+
+    .edrea-grid-sizer {
+        width: 100% !important;
+    } 
+    .edrea-card__detail a h1 {
+        font-size: 26px !important;
+    }
+    .edrea-card__detail p {
+        font-size: 17px !important;
+    }
+
+}
+
+@include landscapeScreen {
+
+    .edrea-grid-sizer {
+        width: calc(48% - 20px);
+    }
+
+}
+
+@include laptopScreen {
+    .edrea-card__detail a h1 {
+        font-size: 21px;
+    }
+    .edrea-card__detail p {
+        font-size: 14px;
     }
 }

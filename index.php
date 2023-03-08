@@ -3,10 +3,10 @@
 global $wp_query;
 
 $args = array(
-    'prev_text'          => __( 'Older' ),
-    'next_text'          => __( 'Newest' ),
-    'screen_reader_text' => __( 'Posts navigation' ),
-    'aria_label'         => __( 'Posts' ),
+    'prev_text'          => __( 'Older', 'edrea' ),
+    'next_text'          => __( 'Newest', 'edrea' ),
+    'screen_reader_text' => __( 'Posts navigation', 'edrea' ),
+    'aria_label'         => __( 'Posts', 'edrea' ),
     'class'              => 'posts-navigation',
 );
 
@@ -36,11 +36,12 @@ get_header(); ?>
                             <div class="trending-detail">
                                 <h2 class="trending-title"><?php echo $trend['title']; ?></h2>
                                 <p class="trending-excerpt"><?php echo $trend['excerpt']; ?></p>
-                                <a class="trending-button" href="<?php echo $trend['permalink']; ?>"><?php echo __( 'Read Now' ); ?></a>
+                                <a class="trending-button" href="<?php echo $trend['permalink']; ?>"><?php echo __( 'Read Now', 'edrea' ); ?></a>
                             </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
+                <div class="swiper-pagination"></div>
                  <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -61,12 +62,10 @@ get_header(); ?>
                 endif;
             ?> 
         </div>
-        <?php if( $query->have_posts() ) : ?>
-            <div class="edrea-load-more">
-                <input type="hidden" id="button-text" value="<?php echo __("All Caught");?>">
-                <button id="button-load-more" value="<?php echo admin_url('admin-ajax.php'); ?>"><?php echo __( 'Load more' ); ?></button>
-            </div>
-        <?php endif; ?>
+        <div class="edrea-load-more">
+            <input type="hidden" id="button-text" value="<?php echo __("All Caught", 'edrea' );?>">
+            <button id="button-load-more" value="<?php echo admin_url('admin-ajax.php'); ?>"><?php echo __( 'Load more', 'edrea' ); ?></button>
+        </div>
     </div>
 </main>
 

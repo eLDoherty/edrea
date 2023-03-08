@@ -4,6 +4,9 @@
 // Typography
 @import './typography/typography';
 
+// Breakpoints
+@import './breakpoints/breakpoints'; 
+
 // Global
 @import './global/global';
 @import './global/edrea-main';
@@ -13,6 +16,9 @@
 
 // Single
 @import './single/single';
+
+// 404
+@import './404/404';
 
 // Components
 @import './components/header';
