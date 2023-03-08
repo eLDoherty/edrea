@@ -20,6 +20,20 @@ body {
   scroll-behavior: smooth;
 }
 
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
 h1, h2, h3, h4, h5 {
   color: rgb(80, 80, 80);
 }
@@ -511,6 +525,7 @@ blockquote::before {
   .edrea-header {
     position: sticky;
     top: 0;
+    padding: 20px 0;
   }
   .edrea-header__wrapper .site-search input {
     margin-bottom: 10px;

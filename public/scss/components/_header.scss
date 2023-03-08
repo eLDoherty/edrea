@@ -118,7 +118,7 @@
     .edrea-header__wrapper .site-search {
         width: calc( 30% - 20px );
     }
-}
+} 
 
 @include laptopScreen {
     .edrea-header__wrapper .main-navigation ul li a {
@@ -143,6 +143,7 @@
     .edrea-header {
         position: sticky;
         top: 0;
+        padding: 20px 0;
     }
     .edrea-header__wrapper .site-search input {
         margin-bottom: 10px;
