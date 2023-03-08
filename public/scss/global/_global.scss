@@ -83,6 +83,9 @@ blockquote {
     width: 100% !important;
 }
 
+figure {
+    width: 100% !important;
+}
 
 @include laptopScreen {
     .container {
