@@ -10,7 +10,7 @@ A simple, fast and optimized Wordpress themes for blogging and news
 - Meta SEO ready
 - Mobile friendly
 - Responsive
-- Social share article
+- Include social share
 - Simple and clean
 - Free to use
 
@@ -28,4 +28,4 @@ You can request features as you want. But im not promise I will adding it :D. An
 
 # Statuses
 
-The themes under construction
+Ready to test
