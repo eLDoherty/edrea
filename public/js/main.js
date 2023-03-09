@@ -1,15 +1,18 @@
 jQuery(document).ready( function($) {
 
-    // Masonry layout
-    $('.edrea-masonry').masonry({
-        itemSelector: '.edrea-card',
-        gutter : 3,
-        stagger: 9,
-        percentPosition: true,
-        transitionDuration: '1.4s',
-        columnWidth: '.edrea-grid-sizer'
-    });
+    $('.edrea-masonry').imagesLoaded().always( function() {
 
+        $('.edrea-masonry').masonry({
+            itemSelector: '.edrea-card',
+            gutter : 3,
+            stagger: 9,
+            percentPosition: true,
+            transitionDuration: '1.4s',
+            columnWidth: '.edrea-grid-sizer'
+        });
+
+    });
+  
     // Ajax Load More
     var ajax_url = $('#button-load-more').val();
     var total_posts = 1;
@@ -33,12 +36,13 @@ jQuery(document).ready( function($) {
 
                 if( res ) {
                     var $content = $( res );
-                    $('.edrea-masonry').append( $content );
-                    $('.edrea-masonry').imagesLoaded( function() {
+                    $('.edrea-masonry').imagesLoaded().always( function() {
+                        $('.edrea-masonry').append( $content );
+                    }).done( function() {
                         $('.edrea-masonry').masonry( 'appended', $content );
                         window.scrollBy(0, 350);
-                    })
-
+                    });
+                    $('.edrea-masonry').masonry('layout');
                     $('#button-load-more').text('Load more');
                 } else {
                     $('#button-load-more').text( $('#button-text' ).val() );
