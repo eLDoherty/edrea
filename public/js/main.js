@@ -13,11 +13,11 @@ jQuery(document).ready( function($) {
     // Ajax Load More
     var ajax_url = $('#button-load-more').val();
     var total_posts = 1;
-    $('#button-load-more').click( function(e) {
+    $('#button-load-more').on( 'click', function(e) {
 
-        e.preventDefault();
+        e.preventDefault(); 
 
-        total_posts += 1;
+        total_posts += 1; 
 
         $(this).text('Loading...');
         
@@ -47,30 +47,30 @@ jQuery(document).ready( function($) {
             },
 
         });
-    })
+    });
 
     // Mobile menu button handler
-    $('.edrea-mobile-button').click( function() {
+    $('.edrea-mobile-button').on( 'click', function() {
         $('.edrea-mobile-navigation').css({ left: '40px', opacity: '1'});
     });
-    $('.close-mobile-menu').click( function() {
+    $('.close-mobile-menu').on( 'click', function() {
         $('.edrea-mobile-navigation').css({ left: '100%', opacity: '0'});
-    })
-    $('.menu-item-depth-0.menu-item-has-children').click( function(e) {
+    });
+    $('.menu-item-depth-0.menu-item-has-children').on( 'click', function(e) {
         $(this).children('.menu-depth-1').slideToggle();
         $(this).toggleClass('menu-active');
     });
 
     // Handle comment form when empty
     $('#commentform').on('submit', function(e) {
-        e.preventDefault();
-       if( $('#comment').val().length < 1 ) {
+        if( $('#comment').val().length < 1 ) {
+             e.preventDefault();
             alert('Please fill the comment field');
-       } else {
-            e.currentTarget.submit();
-       }
+            return false;
+        } 
+        return true;
     });
-
+  
 });
 
 

@@ -18,3 +18,11 @@
         }
     }
 }
+
+// Responsiveness
+
+@include landscapeScreen {
+    .edrea-breadcrumbs li span {
+        margin: 0 5px;
+    }
+}
