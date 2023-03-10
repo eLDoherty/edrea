@@ -22,6 +22,7 @@
                 max-height: 80px;
             }
         }
+        } 
         .main-navigation {
             width: calc(46% - 20px);
             display: flex;
@@ -39,6 +40,7 @@
                         font-size: 17px;
                         font-weight: 500;
                         transition: 0.3s;
+                        word-break: break-all;
                         &:hover {
                             color: $secondaryColor;
                         }

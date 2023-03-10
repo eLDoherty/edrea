@@ -22,20 +22,18 @@ var __webpack_exports__ = {};
   !*** ./public/js/main.js ***!
   \***************************/
 jQuery(document).ready(function ($) {
-  // Masonry layout
-  $('.edrea-masonry').masonry({
-    itemSelector: '.edrea-card',
-    gutter: 3,
-    stagger: 9,
-    percentPosition: true,
-    transitionDuration: '1.4s',
-    columnWidth: '.edrea-grid-sizer'
+  $('#edrea-ajax-wrapper').imagesLoaded(function () {
+    $('#edrea-ajax-wrapper').masonry({
+      itemSelector: '.edrea-card',
+      transitionDuration: '1.5s',
+      columnWidth: '.edrea-grid-sizer'
+    });
   });
 
   // Ajax Load More
   var ajax_url = $('#button-load-more').val();
   var total_posts = 1;
-  $('#button-load-more').click(function (e) {
+  $('#button-load-more').on('click', function (e) {
     e.preventDefault();
     total_posts += 1;
     $(this).text('Loading...');
@@ -48,12 +46,10 @@ jQuery(document).ready(function ($) {
         count: total_posts
       },
       success: function (res) {
-        if (res) {
+        if (res.length > 0) {
           var $content = $(res);
-          $('.edrea-masonry').append($content);
-          $('.edrea-masonry').imagesLoaded(function () {
-            $('.edrea-masonry').masonry('appended', $content);
-            window.scrollBy(0, 350);
+          $('#edrea-ajax-wrapper').imagesLoaded().done(function () {
+            $('#edrea-ajax-wrapper').append($content).masonry('appended', $content);
           });
           $('#button-load-more').text('Load more');
         } else {
@@ -64,31 +60,32 @@ jQuery(document).ready(function ($) {
   });
 
   // Mobile menu button handler
-  $('.edrea-mobile-button').click(function () {
+  $('.edrea-mobile-button').on('click', function () {
     $('.edrea-mobile-navigation').css({
       left: '40px',
       opacity: '1'
     });
   });
-  $('.close-mobile-menu').click(function () {
+  $('.close-mobile-menu').on('click', function () {
     $('.edrea-mobile-navigation').css({
       left: '100%',
       opacity: '0'
     });
   });
-  $('.menu-item-depth-0.menu-item-has-children').click(function (e) {
+
+  $('.menu-item-depth-0.menu-item-has-children').on('click', function (e) {
     $(this).children('.menu-depth-1').slideToggle();
     $(this).toggleClass('menu-active');
   });
 
   // Handle comment form when empty
   $('#commentform').on('submit', function (e) {
-    e.preventDefault();
     if ($('#comment').val().length < 1) {
+      e.preventDefault();
       alert('Please fill the comment field');
-    } else {
-      e.currentTarget.submit();
+      return false;
     }
+    return true;
   });
 });
 }();

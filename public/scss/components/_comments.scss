@@ -82,3 +82,9 @@
         border-radius: 5px;
     }
 }
+
+// Responsiveness
+
+@include landscapeScreen {
+    .edrea-comments-area .comments-title {font-size: 20px;}
+}
