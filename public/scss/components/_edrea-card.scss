@@ -10,6 +10,8 @@
         img {
             width: 100%;
             border-radius: 8px;
+            height: 320px;
+            object-fit: cover;
         }
         .article-date {
             position: absolute;

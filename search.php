@@ -21,7 +21,7 @@ get_header(); ?>
             <?php if ( have_posts() ) : 
 
                     ?>
-                    <div class="edrea-archive-blog__wrapper edrea-masonry">
+                    <div id="edrea-ajax-wrapper" class="edrea-archive-blog__wrapper edrea-masonry">
                     <?php
                     /* Start the Loop */
                     while ( have_posts() ) :

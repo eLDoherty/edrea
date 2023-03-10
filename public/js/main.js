@@ -1,16 +1,11 @@
 jQuery(document).ready( function($) {
 
-    $('.edrea-masonry').imagesLoaded().always( function() {
-
-        $('.edrea-masonry').masonry({
+    $('#edrea-ajax-wrapper').imagesLoaded( function() {
+        $('#edrea-ajax-wrapper').masonry({
             itemSelector: '.edrea-card',
-            gutter : 3,
-            stagger: 9,
-            percentPosition: true,
-            transitionDuration: '1.4s',
+            transitionDuration: '1.5s',
             columnWidth: '.edrea-grid-sizer'
         });
-
     });
   
     // Ajax Load More
@@ -34,23 +29,18 @@ jQuery(document).ready( function($) {
             },
             success: function( res ){
 
-                if( res ) {
+                if( res.length > 0 ) {
                     var $content = $( res );
-                    $('.edrea-masonry').imagesLoaded().always( function() {
-                        $('.edrea-masonry').append( $content );
-                    }).done( function() {
-                        $('.edrea-masonry').masonry( 'appended', $content );
-                        window.scrollBy(0, 350);
+                    $('#edrea-ajax-wrapper').imagesLoaded().done( function() {
+                        $('#edrea-ajax-wrapper').append( $content ).masonry( 'appended', $content );
                     });
-                    $('.edrea-masonry').masonry('layout');
                     $('#button-load-more').text('Load more');
                 } else {
                     $('#button-load-more').text( $('#button-text' ).val() );
                 }
-
             },
-
         });
+
     });
 
     // Mobile menu button handler

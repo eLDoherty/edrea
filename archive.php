@@ -12,7 +12,7 @@ get_header(); ?>
 
 <main id="post-<?php the_ID(); ?>" class="edrea-archive-blog <?php post_class(); ?>">
     <div class="container">
-        <div class="edrea-archive-blog__wrapper edrea-masonry">
+        <div id="edrea-ajax-wrapper" class="edrea-archive-blog__wrapper edrea-masonry">
             <?php if ( have_posts() ) : 
                     /* Start the Loop */
                     while ( have_posts() ) :
