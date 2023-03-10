@@ -1,3 +1,13 @@
+<?php
+
+/**
+ * Edrea Themes Header.
+ *
+ * @package Edrea
+ */
+
+?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>

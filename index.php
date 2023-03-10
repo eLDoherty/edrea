@@ -1,5 +1,11 @@
 <?php 
 
+/**
+ * The main template.
+ *
+ * @package Edrea
+ */
+
 global $wp_query;
 
 $args = array(

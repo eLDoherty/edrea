@@ -2,7 +2,10 @@
 
 /**
  * Custom walker class.
+ *
+ * @package Edrea
  */
+
 class Edrea_Nav_Walker extends Walker_Nav_Menu {
 
 	/**

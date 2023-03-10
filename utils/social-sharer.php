@@ -1,3 +1,13 @@
+<?php
+
+/**
+ * Social sharer Section.
+ *
+ * @package Edrea
+ */
+
+?>
+
 <h3 style="margin-bottom: 5px; padding: 0px;"><?php echo __( "Share:" , 'edrea' ); ?></h3>
 <ul class="edrea-social-sharer__wrapper">
     <li>

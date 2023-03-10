@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Edrea Functions.
+ *
+ * @package Edrea
+ */
+
+/**
  * Enqueue Style and Script
  */
 add_action( 'wp_enqueue_scripts', 'edrea_enqueue_scripts' );

@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+
+/**
+ * 404 template.
+ *
+ * @package Edrea
+ */
+
+get_header(); ?>
 
     <main class="edrea-page-not-found">
         <div class="container">

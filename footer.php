@@ -1,4 +1,12 @@
+<?php
 
+/**
+ * Edrea Themes Footer.
+ *
+ * @package Edrea
+ */
+
+?>
         <footer class="edrea-footer">
             <div class="container">
                 <div class="edrea-footer__wrapper">

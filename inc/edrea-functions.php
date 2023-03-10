@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Edrea themes functions.
+ *
+ * @package Edrea
+ */
+
+/**
  * Get trending post by tags
  */
 function edrea_trending_posts() {

@@ -1,5 +1,11 @@
 <?php 
 
+/**
+ * Archive template.
+ *
+ * @package Edrea
+ */
+
 $args = array(
     'prev_text'          => __( 'Older', 'edrea' ),
     'next_text'          => __( 'Newest', 'edrea' ),

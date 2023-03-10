@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+
+/**
+ * Single Page Template.
+ *
+ * @package Edrea
+ */
+
+get_header(); ?>
 
 <main id="post-<?php the_ID(); ?>" <?php post_class( 'edrea-single-post edrea-main' ); ?>>
     <div class="container">

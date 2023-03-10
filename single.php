@@ -1,5 +1,11 @@
 <?php 
 
+/**
+ * Single Post template.
+ *
+ * @package Edrea
+ */
+
 global $post;
 $author_id = $post->post_author;
 
