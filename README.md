@@ -22,6 +22,10 @@ You can download Edrea Themes on Wordpress themes list and activate as usual, or
 
 The sliders will appear on the top of your blog-news list (Not in single-page). It will automatically appear when you have post with "Trending" tags. So, make sure you have at least one to trigger the slider.
 
+# About Ajax Load More Button
+
+This button will appear on your index page that show the article list, the load more button will append items (total items will be loaded depends how many page per post you set on your dashboard).
+
 # Features suggestion
 
 You can request features as you want. But im not promise I will adding it :D. And, of course I will improve this themes to make it more better.
