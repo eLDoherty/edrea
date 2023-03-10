@@ -1030,6 +1030,26 @@ figure {
 .edrea-social-sharer__wrapper li:nth-child(6) {
   background-color: rgb(165, 165, 165);
 }
+.edrea-social-sharer h4 {
+  margin: 0 15px;
+}
+.edrea-social-sharer .edrea-copy-url #copy_url {
+  padding: 13px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.301);
+  color: rgb(80, 80, 80);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.edrea-social-sharer .edrea-copy-url #copy_url:focus {
+  outline: #79D1C3;
+  border: 1px solid #79D1C3;
+  color: #79D1C3;
+}
+.edrea-social-sharer .edrea-copy-url span {
+  color: #79D1C3;
+  margin-left: 4px;
+  font-weight: 500;
+}
 
 @media (max-width: 767.98px) {
   .edrea-social-sharer {
@@ -1041,6 +1061,9 @@ figure {
   }
   .edrea-social-sharer__wrapper {
     padding-left: 0 !important;
+  }
+  .edrea-social-sharer h4 {
+    margin: 15px;
   }
 }
 .edrea-comments-area {

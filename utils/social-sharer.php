@@ -53,3 +53,8 @@
         </a>
     </li>
 </ul>
+<h4><?php echo __( 'OR COPY URL', 'edrea' ); ?></h4>
+<div class="edrea-copy-url">
+    <input type="text" id="copy_url" value="<?php echo get_the_permalink(); ?>" readonly>
+    <span id="copied"></span>
+</div>

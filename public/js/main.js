@@ -64,6 +64,13 @@ jQuery(document).ready( function($) {
         } 
         return true;
     });
+
+    // Handle copy url
+    $('#copy_url').on( 'click', function() {
+        navigator.clipboard.writeText($(this).val());
+        $('#copied').text('Copied!');
+    });
+
 });
 
 

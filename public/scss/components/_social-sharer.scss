@@ -50,6 +50,31 @@
             }
         }
     }
+    h4 {
+        margin: 0 15px;
+    }
+
+    .edrea-copy-url {
+
+        #copy_url {
+            padding: 13px 8px;
+            border: 1px solid $blackOpacity;
+            color: $blackText;
+            transition: 0.3s;
+            border-radius: 5px;
+            &:focus {
+                outline: $green;
+                border: 1px solid $green;
+                color: $green;
+            }
+        }
+
+        span {
+            color: $green;
+            margin-left: 4px;
+            font-weight: 500;
+        }
+    }
 }
 
 // Responsiveness
@@ -64,5 +89,8 @@
     }
     .edrea-social-sharer__wrapper {
         padding-left: 0 !important;
+    }
+    .edrea-social-sharer h4 {
+        margin: 15px;
     }
 }

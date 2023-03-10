@@ -86,6 +86,12 @@ jQuery(document).ready(function ($) {
     }
     return true;
   });
+
+  // Handle copy url
+  $('#copy_url').on('click', function () {
+    navigator.clipboard.writeText($(this).val());
+    $('#copied').text('Copied!');
+  });
 });
 }();
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
