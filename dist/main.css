@@ -139,6 +139,9 @@ figure {
   line-height: 1.6;
   color: rgb(80, 80, 80);
 }
+.edrea-main img {
+  max-width: 100%;
+}
 
 @media (max-width: 991.98px) {
   h1 {
@@ -436,6 +439,40 @@ figure {
   font-weight: 600;
 }
 
+@media (max-width: 991.98px) {
+  .edrea-single-post__wrapper {
+    flex-direction: column;
+  }
+  .edrea-single-post__wrapper--left, .edrea-single-post__wrapper--right {
+    width: 100%;
+  }
+  body .edrea-single-post__title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767.98px) {
+  .edrea-single-post__meta .post-date p {
+    font-size: 13px;
+  }
+  .edrea-single-post__meta--author .edrea-author-name {
+    font-size: 13px;
+  }
+}
+@media (max-width: 575.98px) {
+  body .edrea-single-post__title {
+    font-size: 30px;
+  }
+}
+.edrea-page-not-found {
+  padding: 80px 0;
+  text-align: center;
+}
+.edrea-page-not-found a {
+  text-decoration: none;
+  color: #e77221;
+  font-weight: 600;
+}
+
 .edrea-header {
   padding: 30px 0;
   background-color: #005792;
@@ -458,6 +495,9 @@ figure {
   font-style: italic;
   margin-left: 20px;
   font-weight: 600;
+}
+.edrea-header__wrapper .site-branding img {
+  max-height: 80px;
 }
 .edrea-header__wrapper .main-navigation {
   width: calc(46% - 20px);

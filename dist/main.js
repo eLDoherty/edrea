@@ -72,6 +72,7 @@ jQuery(document).ready(function ($) {
       opacity: '0'
     });
   });
+
   $('.menu-item-depth-0.menu-item-has-children').on('click', function (e) {
     $(this).children('.menu-depth-1').slideToggle();
     $(this).toggleClass('menu-active');

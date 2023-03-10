@@ -27,6 +27,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <?php echo the_content(); ?>
+
                 <?php if( get_the_tags() ) : ?>
                     <div class="edrea-tags">
                         <p>Tags: </p>
