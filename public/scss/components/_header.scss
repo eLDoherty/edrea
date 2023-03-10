@@ -20,8 +20,8 @@
             }
             img {
                 max-height: 80px;
+                max-width: 70%;
             }
-        }
         } 
         .main-navigation {
             width: calc(46% - 20px);
@@ -130,7 +130,10 @@
         font-size: 14px;
     }
     .edrea-header__wrapper .site-branding {
-        width: calc( 20% - 20px );
+        width: calc( 30% - 20px );
+    }
+    .edrea-header__wrapper .site-branding img {
+        width: 100% !important;
     }
     .edrea-header__wrapper .site-search {
         width: calc( 35% - 20px );

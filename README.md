@@ -26,6 +26,10 @@ The sliders will appear on the top of your blog-news list (Not in single-page). 
 
 This button will appear on your index page that show the article list, the load more button will append items (total items will be loaded depends how many page per post you set on your dashboard).
 
+# Layout
+
+Index page with masonry layout and side bar in single page, will be one column if sidebar not activated.
+
 # Features suggestion
 
 You can request features as you want. But im not promise I will adding it :D. And, of course I will improve this themes to make it more better.
