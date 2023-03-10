@@ -7,7 +7,7 @@ A simple, fast and optimized Wordpress themes for blogging and news
 
 - Sliders for trending-selected blog or news (Optional)
 - Ajax Load More
-- Meta SEO ready
+- Standart Meta SEO ready
 - Mobile friendly
 - Responsive
 - Include social share
