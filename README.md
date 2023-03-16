@@ -37,3 +37,7 @@ You can request features as you want. But im not promise I will adding it :D. An
 # Statuses
 
 Ready to install
+
+# License
+GPL V2 or Later
+http://opensource.org/licenses/gpl-2.0.php GNU Public License
