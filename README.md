@@ -39,5 +39,10 @@ You can request features as you want. But im not promise I will adding it :D. An
 Ready to install
 
 # License
+
 GPL V2 or Later
 http://opensource.org/licenses/gpl-2.0.php GNU Public License
+
+# Demo
+
+Edrea themes : https://edrea.elcorleone.com/
