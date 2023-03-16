@@ -2,6 +2,8 @@
 
 /**
  * The main template.
+ * 
+ * @package Edrea
  *
  * @version 1.0.0
  * @copyright  Copyright (c) 2023, Leonardo Doherty
