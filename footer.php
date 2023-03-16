@@ -4,6 +4,11 @@
  * Edrea Themes Footer.
  *
  * @package Edrea
+ * 
+ * @version 1.0.0
+ * @copyright  Copyright (c) 2023, Leonardo Doherty
+ * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License
+ * 
  */
 
 ?>
@@ -21,7 +26,7 @@
                         ?>
                     </nav>
                     <div class="edrea-credit">
-                        <p>©2023 <a href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a> . All Rights Reserved.</p>
+                        <p>©2023 <a href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a>. All Rights Reserved.</p>
                         <p class="author">Themes by <a style="color: white" href="https://github.com/eLDoherty/edrea">Leonardo Doherty</a></p>
                     </div>
                 </div>

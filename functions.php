@@ -4,6 +4,11 @@
  * Edrea Functions.
  *
  * @package Edrea
+ * 
+ * @version 1.0.0
+ * @copyright  Copyright (c) 2023, Leonardo Doherty
+ * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License
+ * 
  */
 
 /**
@@ -22,6 +27,7 @@ function edrea_enqueue_scripts() {
     wp_enqueue_script( 'masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array( 'jquery' ) );
     wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array( 'jquery' ) );
     wp_enqueue_script( 'imageLoad', 'https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js', array( 'jquery' ) );
+    wp_enqueue_script( 'comment-reply', get_template_directory_uri() . '/dist/comment.js' , array( 'jquery' ) );
 
 }
 
@@ -63,6 +69,18 @@ function edrea_setup() {
 			'caption',
 			'style',
 			'script',
+		)
+	);
+
+	// Set up the WordPress core custom background feature.
+	add_theme_support(
+		'custom-background',
+		apply_filters(
+			'edrea_custom_background_args',
+			array(
+				'default-color' => 'ffffff',
+				'default-image' => '',
+			)
 		)
 	);
 
