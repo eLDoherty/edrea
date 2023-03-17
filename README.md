@@ -12,6 +12,7 @@ A simple, fast and optimized Wordpress themes for blogging and news
 - Responsive
 - Include social share
 - Simple and clean
+- Custom Background Color
 - Free to use
 
 # Activation
